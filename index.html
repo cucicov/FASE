@@ -91,7 +91,11 @@
                 // insert one image upwards and change direction
                 console.log(lineLimit);
                 if (lineLimit === 0) {
-                    direction = toggleDirection;
+                    if (index < restAllImages.length/3) {
+                        direction = 1;
+                    } else {
+                        direction = -1;
+                    }
                     toggleDirection *= -1;
                     lineLimit = linesPattern.pop();
                 }
@@ -122,8 +126,12 @@
             // insert one image upwards and change direction
             console.log(lineLimit);
             if (lineLimit === 0) {
+                if (index < restAllImages.length/3) {
+                    direction = 1;
+                } else {
+                    direction = -1;
+                }
                 toggleDirection *= -1;
-                direction = toggleDirection;
                 lineLimit = linesPattern.pop();
             }
 

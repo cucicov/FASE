@@ -2,27 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9809a27c-1fee-4a72-b896-fb1ce261b47b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/amalieTrones/4_1200_800.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/andreasTystad/5_800_1200.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/images/annaMelbye/6_1200_727.jpg" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/10_1195_1200.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/1_1200_800.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/1_981_683.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/2_627_683.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/2_800_1200.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/3_1200_800.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/3_981_485.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/4_485_683.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/4_800_1200.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/5_1200_727.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/6_796_1200.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/7_1200_800.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/8_1177_1200.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/9_1200_800.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +62,7 @@
       <updated>1599072545512</updated>
       <workItem from="1599072549119" duration="30716000" />
       <workItem from="1599472973892" duration="4440000" />
-      <workItem from="1599914872413" duration="23628000" />
+      <workItem from="1599914872413" duration="24478000" />
     </task>
     <servers />
   </component>
