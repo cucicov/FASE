@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Quick Start - Leaflet</title>
+    <style>
+        body {
+            padding: 0;
+            margin: 0;
+        }
+        html, body, #mapid {
+            height: 100%;
+            width: 100%;
+            background: #fff
+        }
+    </style>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" type="image/x-icon" href="docs/images/favicon.ico" />
+
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.6.0/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
+</head>
+<body>
+
+<div id="mapid"></div>
+<script>
+
+    var mymap = L.map('mapid', {
+            attributionControl: false,
+            zoomControl: false
+        }).setView([0.0, 0.0], 8);
+
+    // L.tileLayer('https://api.mapbox.com/styles/v1/{id}/tiles/{z}/{x}/{y}?access_token=pk.eyJ1IjoibWFwYm94IiwiYSI6ImNpejY4NXVycTA2emYycXBndHRqcmZ3N3gifQ.rJcFIG214AriISLbB6B5aw', {
+    //     maxZoom: 18,
+    //     attribution: 'Map data &copy; <a href="https://www.openstreetmap.org/">OpenStreetMap</a> contributors, ' +
+    //         '<a href="https://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>, ' +
+    //         'Imagery © <a href="https://www.mapbox.com/">Mapbox</a>',
+    //     id: 'mapbox/streets-v11',
+    //     tileSize: 512,
+    //     zoomOffset: -1
+    // }).addTo(mymap);
+
+    // var marker = L.marker([51.5, -0.09]).addTo(mymap);
+
+    // var circle = L.circle([51.508, -0.11], {
+    //     color: 'red',
+    //     fillColor: '#f03',
+    //     fillOpacity: 0.5,
+    //     radius: 500
+    // }).addTo(mymap);
+
+    var originPoint = mymap.latLngToContainerPoint([0,0]);
+    var nextCornerPoint = originPoint.add({x: 981, y: -683});
+    var nextCornerLatLng = mymap.containerPointToLatLng(nextCornerPoint);
+
+    var imageUrl = 'images/1_1200_800.jpg';
+    var imageBounds = [[0, 0], nextCornerLatLng];
+    var over1 = L.imageOverlay(imageUrl, imageBounds, {interactive: true}).addTo(mymap).on('click', function() {alert('111');});
+    // console.log(over1.getBounds().getSouthWest()) ;
+
+    var imagesList = [over1];
+    let directionArray = [1, -1, 2, -2];
+    // 1 = UP
+    // -1 = DOWN
+    // 2 = RIGHT
+    // -2 = LEFT
+    let imagesPaths = ['1_1200_800.jpg', '2_800_1200.jpg', '3_1200_800.jpg', '4_800_1200.jpg','5_1200_727.jpg'];
+
+    imagesList.push(addImage(`images/3_1200_800.jpg`, 2, imagesList[0]));
+    imagesList.push(addImage(`images/2_800_1200.jpg`, 2, imagesList[1]));
+    imagesList.push(addImage(`images/5_1200_727.jpg`, 2, imagesList[2]));
+    imagesList.push(addImage(`images/4_800_1200.jpg`, 2, imagesList[3]));
+    imagesList.push(addImage(`images/7_1200_800.jpg`, 2, imagesList[4]));
+    imagesList.push(addImage(`images/5_1200_727.jpg`, 2, imagesList[5]));
+    imagesList.push(addImage(`images/8_1177_1200.jpg`, 2, imagesList[6]));
+    imagesList.push(addImage(`images/7_1200_800.jpg`, 1, imagesList[7]));
+    imagesList.push(addImage(`images/6_796_1200.jpg`, -2, imagesList[8]));
+    imagesList.push(addImage(`images/9_1200_800.jpg`, -2, imagesList[9]));
+    imagesList.push(addImage(`images/2_800_1200.jpg`, -2, imagesList[10])); // 10
+    imagesList.push(addImage(`images/8_1177_1200.jpg`, -2, imagesList[11]));
+    imagesList.push(addImage(`images/4_800_1200.jpg`, 1, imagesList[12]));
+    imagesList.push(addImage(`images/10_1195_1200.jpg`, 2, imagesList[13]));
+    imagesList.push(addImage(`images/6_796_1200.jpg`, 2, imagesList[14]));
+    imagesList.push(addImage(`images/9_1200_800.jpg`, 2, imagesList[15]));
+    imagesList.push(addImage(`images/10_1195_1200.jpg`, 2, imagesList[16]));
+    imagesList.push(addImage(`images/9_1200_800.jpg`, 1, imagesList[17]));
+    imagesList.push(addImage(`images/3_1200_800.jpg`, -2, imagesList[18]));
+    imagesList.push(addImage(`images/10_1195_1200.jpg`, -2, imagesList[19]));
+    imagesList.push(addImage(`images/5_1200_727.jpg`, -2, imagesList[20]));
+    imagesList.push(addImage(`images/3_1200_800.jpg`, -2, imagesList[21]));
+    imagesList.push(addImage(`images/4_800_1200.jpg`, -2, imagesList[22]));
+    imagesList.push(addImage(`images/5_1200_727.jpg`, 1, imagesList[23]));
+    imagesList.push(addImage(`images/4_800_1200.jpg`, 2, imagesList[24]));
+    imagesList.push(addImage(`images/4_800_1200.jpg`, 2, imagesList[25]));
+    imagesList.push(addImage(`images/5_1200_727.jpg`, 2, imagesList[26]));
+    imagesList.push(addImage(`images/6_796_1200.jpg`, 2, imagesList[27]));
+
+    imagesList.push(addImage(`images/7_1200_800.jpg`, 1, imagesList[28]));
+    imagesList.push(addImage(`images/2_800_1200.jpg`, -2, imagesList[29]));
+    imagesList.push(addImage(`images/3_1200_800.jpg`, -2, imagesList[30]));
+    imagesList.push(addImage(`images/4_800_1200.jpg`, -2, imagesList[31]));
+    imagesList.push(addImage(`images/10_1195_1200.jpg`, -2, imagesList[32]));
+    imagesList.push(addImage(`images/8_1177_1200.jpg`, 1, imagesList[33]));
+    imagesList.push(addImage(`images/5_1200_727.jpg`, 2, imagesList[34]));
+    imagesList.push(addImage(`images/6_796_1200.jpg`, 2, imagesList[35]));
+    imagesList.push(addImage(`images/9_1200_800.jpg`, 2, imagesList[36]));
+    imagesList.push(addImage(`images/5_1200_727.jpg`, 2, imagesList[37]));
+
+    mymap.setZoom(5);
+
+    // console.log(imagesList.length);
+    // imagesList.push(addImage('images/1.png', -1, over1));
+    // imagesList.push(addImage('images/1.png', 1, over1));
+    // imagesList.push(addImage('images/1.png', 2, over1));
+    // imagesList.push(addImage('images/1.png', -2, over1));
+    // imagesList.push(addImage('images/1.png', 1, over1));
+    // imagesList.push(addImage('images/1.png', 1, over1));
+
+    function addImage(imagePath, direction, parent) {
+
+        let imageWidth = imagePath.split('_')[1];
+        let imageHeight = imagePath.split('_')[2].split('.')[0];
+        // console.log(imageWidth + ":" + imageHeight);
+
+        let overlay = true;
+        let staticOriginX = parent.getBounds().getSouthWest()['lat']; // TODO: replace with parent origin
+        let staticOriginY = parent.getBounds().getSouthWest()['lng']; // TODO: replace with parent origin
+        // console.log('image added');
+
+        let variableOrigin;
+        if (direction % 2 === 0) {
+            variableOrigin = staticOriginY;
+        } else {
+            variableOrigin = staticOriginX;
+        }
+
+        let variableOriginY = staticOriginY;
+        let variableOriginX = staticOriginX;
+
+        let originPoint = mymap.latLngToContainerPoint([staticOriginX,staticOriginY]);
+        let nextCornerPoint = originPoint.add({x: parseInt(imageWidth), y: parseInt(imageHeight)*-1});
+        let nextCornerLatLng = mymap.containerPointToLatLng(nextCornerPoint);
+        let imageBounds = [[variableOriginX, variableOriginY], nextCornerLatLng];
+
+        let newImage = L.imageOverlay(imagePath, imageBounds, {opacity: 1})
+            .addTo(mymap)
+            .on('click', function() {
+                alert('222');
+            });
+
+        let margin = 70; // expressed in lat log. 1 unit = 2px;
+
+        while (overlay || margin > 0) {
+            // console.log(imagesList.length);
+            if (direction > 0) {
+                variableOrigin += 0.01;
+            } else {
+                variableOrigin -= 0.01;
+            }
+            if (direction % 2 === 0) {
+                variableOriginY = variableOrigin;
+            } else {
+                variableOriginX = variableOrigin;
+            }
+
+            originPoint = mymap.latLngToContainerPoint([variableOriginX, variableOriginY]);
+            nextCornerPoint = originPoint.add({x: parseInt(imageWidth), y: parseInt(imageHeight)*-1});
+            nextCornerLatLng = mymap.containerPointToLatLng(nextCornerPoint);
+            imageBounds = [[variableOriginX, variableOriginY], nextCornerLatLng];
+
+            newImage.setBounds(imageBounds);
+
+            // mechanism to simulate break. once an overlay is detected -> move the image and check again.
+            let notIntersection = true;
+            imagesList.forEach((localImage) => {
+                notIntersection = notIntersection && !localImage.getBounds().intersects(newImage.getBounds());
+                // console.log(overlay)
+            });
+            //
+            // for (i = 0; i < cars.length; i++) {
+            //     text += cars[i] + "<br>";
+            // }
+            overlay = !notIntersection;
+            if (!overlay) {
+                margin = margin - 1;
+            }
+            // overlay = parent.getBounds().intersects(newImage.getBounds());
+        }
+
+        return newImage;
+    }
+
+
+    // var imageUrl2 = 'http://www.lib.utexas.edu/maps/historical/newark_nj_1922.jpg',
+    //     imageBounds2 = [[0.5, 0.0], [1.0, 0.5]];
+    // L.imageOverlay(imageUrl2, imageBounds2).addTo(mymap);
+
+</script>
+
+
+
+</body>
+</html>
