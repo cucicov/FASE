@@ -62,6 +62,35 @@
 
     populatePanel(uniqueImagesPanel, restAllImages, linesPattern);
 
+    function extractImageAndProcess(imagePath, direction, parentIndex, imageWidth, imageHeight, lineLimit, toggleDirection, index, restAllImages, linesPattern) {
+        imagesList.push(addImage(imagePath, direction, imagesList[parentIndex], imageWidth, imageHeight));
+        parentIndex++;
+
+        // calculate if limit of pictures for current line is reached
+        if (imageHeight <= previousImageHeight) {
+            lineLimit--;
+        }
+        previousImageHeight = imageHeight;
+
+        // if images is already moved up, toggle back to horizontal moving.
+        if (Math.abs(direction) === 1) {
+            direction = 2 * toggleDirection;
+        }
+
+        // insert one image upwards and change direction
+        console.log(lineLimit);
+        if (lineLimit === 0) {
+            if (index < restAllImages.length / 3) {
+                direction = 1;
+            } else {
+                direction = -1;
+            }
+            toggleDirection *= -1;
+            lineLimit = linesPattern.pop();
+        }
+        return {direction, parentIndex, lineLimit, toggleDirection};
+    }
+
     function populatePanel(uniqueImagesPanel, restAllImages, linesPattern) {
         let direction = 2; // starting direction right
         let toggleDirection = 1; // switch between adding to the right and adding to the left
@@ -74,31 +103,11 @@
             let imageHeight = imageName.split('_')[2].split('.')[0];
 
             if (index !== 0) { // first image is added separately above.
-                imagesList.push(addImage(imagePath, direction, imagesList[parentIndex], imageWidth, imageHeight));
-                parentIndex++;
-
-                // calculate if limit of pictures for current line is reached
-                if (imageHeight <= previousImageHeight) {
-                    lineLimit--;
-                }
-                previousImageHeight = imageHeight;
-
-                // if images is already moved up, toggle back to horizontal moving.
-                if (Math.abs(direction) === 1) {
-                    direction = 2 * toggleDirection;
-                }
-
-                // insert one image upwards and change direction
-                console.log(lineLimit);
-                if (lineLimit === 0) {
-                    if (index < restAllImages.length/3) {
-                        direction = 1;
-                    } else {
-                        direction = -1;
-                    }
-                    toggleDirection *= -1;
-                    lineLimit = linesPattern.pop();
-                }
+                const __ret = extractImageAndProcess(imagePath, direction, parentIndex, imageWidth, imageHeight, lineLimit, toggleDirection, index, restAllImages, linesPattern);
+                direction = __ret.direction;
+                parentIndex = __ret.parentIndex;
+                lineLimit = __ret.lineLimit;
+                toggleDirection = __ret.toggleDirection;
             }
 
         });
@@ -109,31 +118,11 @@
             let imageWidth = imageName.split('_')[1];
             let imageHeight = imageName.split('_')[2].split('.')[0];
 
-            imagesList.push(addImage(imagePath, direction, imagesList[parentIndex], imageWidth, imageHeight));
-            parentIndex++;
-
-            // calculate if limit of pictures for current line is reached
-            if (imageHeight <= previousImageHeight) {
-                lineLimit--;
-            }
-            previousImageHeight = imageHeight;
-
-            // if images is already moved up, toggle back to horizontal moving.
-            if (Math.abs(direction) === 1) {
-                direction = 2 * toggleDirection;
-            }
-
-            // insert one image upwards and change direction
-            console.log(lineLimit);
-            if (lineLimit === 0) {
-                if (index < restAllImages.length/3) {
-                    direction = 1;
-                } else {
-                    direction = -1;
-                }
-                toggleDirection *= -1;
-                lineLimit = linesPattern.pop();
-            }
+            const __ret = extractImageAndProcess(imagePath, direction, parentIndex, imageWidth, imageHeight, lineLimit, toggleDirection, index, restAllImages, linesPattern);
+            direction = __ret.direction;
+            parentIndex = __ret.parentIndex;
+            lineLimit = __ret.lineLimit;
+            toggleDirection = __ret.toggleDirection;
 
         });
     }
