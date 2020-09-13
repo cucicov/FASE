@@ -1,13 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="9809a27c-1fee-4a72-b896-fb1ce261b47b" name="Default Changelist" comment="" />
+    <list default="true" id="9809a27c-1fee-4a72-b896-fb1ce261b47b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/amalieTrones/4_1200_800.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/andreasTystad/5_800_1200.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/images/annaMelbye/6_1200_727.jpg" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/10_1195_1200.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/1_1200_800.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/1_981_683.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/2_627_683.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/2_800_1200.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/3_1200_800.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/3_981_485.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/4_485_683.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/4_800_1200.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/5_1200_727.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/6_796_1200.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/7_1200_800.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/8_1177_1200.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/images/9_1200_800.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
   <component name="ProjectId" id="1gy2WnnmMtbvYcWFUIedHSoa0fJ" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectViewState">
     <option name="autoscrollFromSource" value="true" />
     <option name="hideEmptyMiddlePackages" value="true" />
@@ -16,8 +42,9 @@
   </component>
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/images" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/images/annaMelbye" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -28,12 +55,18 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images/annaMelbye" />
+      <recent name="$PROJECT_DIR$/images/amalieTrones" />
+      <recent name="$PROJECT_DIR$/images/adaMiko" />
+      <recent name="$PROJECT_DIR$/images/andreasTystad" />
+      <recent name="$PROJECT_DIR$/images" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/images/artist2" />
+      <recent name="$PROJECT_DIR$/images/artist1" />
       <recent name="$PROJECT_DIR$/images" />
       <recent name="$PROJECT_DIR$" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/images" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -48,7 +81,7 @@
       <updated>1599072545512</updated>
       <workItem from="1599072549119" duration="30716000" />
       <workItem from="1599472973892" duration="4440000" />
-      <workItem from="1599914872413" duration="5273000" />
+      <workItem from="1599914872413" duration="23628000" />
     </task>
     <servers />
   </component>
@@ -56,6 +89,10 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
+    <state x="459" y="44" key="RollbackChangesDialog" timestamp="1600008734539">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="459" y="44" key="RollbackChangesDialog/0.23.1280.777/1280.23.1280.1001@0.23.1280.777" timestamp="1600008734539" />
     <state x="100" y="123" width="1080" height="577" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599372206723">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
