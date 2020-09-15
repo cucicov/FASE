@@ -3,21 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9809a27c-1fee-4a72-b896-fb1ce261b47b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/adaMiko/1_1200_800.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/adaMiko/3_1200_800.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/amalieTrones/2_800_1200.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/amalieTrones/3_1200_800.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/amalieTrones/4_1200_800.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/andreasTystad/4_800_1200.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/andreasTystad/5_800_1200.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/annaMelbye/4_800_1200.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/annaMelbye/5_1200_727.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/annaMelbye/6_1200_727.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/annaMelbye/7_1200_800.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/artist-index.json" beforeDir="false" afterPath="$PROJECT_DIR$/images/artist-index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/camillaLouadah/10_1195_1200.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/camillaLouadah/8_1177_1200.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/camillaLouadah/9_1200_800.jpg" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -94,10 +79,10 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="100" y="123" width="1080" height="577" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1280.-476.1920.1057/0.23.1280.777@0.23.1280.777" timestamp="1599372206723" />
-    <state x="298" y="33" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1600025970765">
+    <state x="298" y="33" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1600186197958">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="298" y="33" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1280.777/1280.23.1280.1001@0.23.1280.777" timestamp="1600025970765" />
+    <state x="298" y="33" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1280.777/1280.23.1280.1001@0.23.1280.777" timestamp="1600186197958" />
     <state x="298" y="33" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1280.-476.1920.1057/0.23.1280.777@0.23.1280.777" timestamp="1599339510024" />
   </component>
 </project>
