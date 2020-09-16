@@ -53,6 +53,7 @@
     }).setView([0.0, 0.0], 8);
 
     var uniqueImagesPanel = [];
+    var uniqueImagesPanelArtistsIds = [];
     // var restAllImages = [];
 
     // TODO: for testing
@@ -204,10 +205,14 @@
             let artistImages = shuffle(images); // randomize list of images.
             let artistIdFound = false;
             $.each(artistImages, (imageIndex, imageName) => {
-                if (matchesImageDirection(imageName, direction) && !uniqueImagesPanel.includes(imageName)) {
+                let artistInitials = imageName.split('_')[0];
+                if (matchesImageDirection(imageName, direction)
+                    && !uniqueImagesPanel.includes(imageName)
+                    && !uniqueImagesPanelArtistsIds.includes(artistInitials)) {
                     selectedImage = imageName;
                     artistIdFound = true;
                     uniqueImagesPanel.push(imageName);
+                    uniqueImagesPanelArtistsIds.push(artistInitials);
                     return false;
                 }
             });
