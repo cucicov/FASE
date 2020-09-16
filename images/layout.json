@@ -1,0 +1,94 @@
+{
+  "presentationPanel": [
+    {
+      "direction": "horizontal",
+      "originX": 0,
+      "originY": 0
+    },
+    {
+      "direction": "vertical",
+      "originX": 0,
+      "originY": -5.089999999999936
+    },
+    {
+      "direction": "horizontal",
+      "originX": 5.089999999999936,
+      "originY": 0
+    },
+    {
+      "direction": "horizontal",
+      "originX": 0,
+      "originY": 7.289999999999889
+    },
+    {
+      "direction": "horizontal",
+      "originX": 0,
+      "originY": 14.579999999999734
+    },
+    {
+      "direction": "horizontal",
+      "originX": 0,
+      "originY": -12.37999999999978
+    },
+    {
+      "direction": "horizontal",
+      "originX": -5.089999999999936,
+      "originY": 0
+    },
+    {
+      "direction": "vertical",
+      "originX": -12.299999999999782,
+      "originY": 2.2
+    },
+    {
+      "direction": "horizontal",
+      "originX": -12.299999999999782,
+      "originY": 7.289999999999892
+    },
+    {
+      "direction": "central",
+      "originX": -7.279999999999889,
+      "originY": 7.289999999999892
+    },
+    {
+      "direction": "horizontal",
+      "originX": -5.089999999999936,
+      "originY": -7.289999999999889
+    },
+    {
+      "direction": "horizontal",
+      "originX": 5.089999999999936,
+      "originY": 7.289999999999889
+    },
+    {
+      "direction": "horizontal",
+      "originX": 7.269999999999889,
+      "originY": -7.289999999999936
+    },
+    {
+      "direction": "horizontal",
+      "originX": 5.089999999999936,
+      "originY": -14.579999999999734
+    },
+    {
+      "direction": "horizontal",
+      "originX": 0,
+      "originY": -19.670000000000275
+    },
+    {
+      "direction": "horizontal",
+      "originX": -10.139999999999828,
+      "originY": -5.089999999999889
+    },
+    {
+      "direction": "vertical",
+      "originX": 10.139999999999828,
+      "originY": 7.289999999999889
+    }
+  ],
+  "generalPanel": [
+    {
+
+    }
+  ]
+}

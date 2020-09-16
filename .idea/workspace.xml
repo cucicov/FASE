@@ -2,6 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9809a27c-1fee-4a72-b896-fb1ce261b47b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/images/layout.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
@@ -79,10 +80,14 @@
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="100" y="123" width="1080" height="577" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1280.-476.1920.1057/0.23.1280.777@0.23.1280.777" timestamp="1599372206723" />
-    <state x="298" y="33" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1600186197958">
+    <state x="298" y="33" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1600214396195">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="298" y="33" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1280.777/1280.23.1280.1001@0.23.1280.777" timestamp="1600186197958" />
+    <state x="298" y="33" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1280.777/1280.23.1280.1001@0.23.1280.777" timestamp="1600214396195" />
     <state x="298" y="33" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1280.-476.1920.1057/0.23.1280.777@0.23.1280.777" timestamp="1599339510024" />
+    <state x="401" y="33" key="refactoring.ChangeSignatureDialog" timestamp="1600202969686">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="401" y="33" key="refactoring.ChangeSignatureDialog/0.23.1280.777/1280.23.1280.1001@0.23.1280.777" timestamp="1600202969686" />
   </component>
 </project>
