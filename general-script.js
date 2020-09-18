@@ -132,6 +132,8 @@ $(document).ready(()=> {
         });
     });
 
+
+    shuffle(artistNames);
     $.each(artistNames, (index, name) => {
         $(".kunst-content").append(`<div class="row">
                                         <a href="#"><div class="col-sm ${name}">${artistBio[name].name}</div></a>
@@ -150,10 +152,10 @@ $(document).ready(()=> {
             map.remove();
             initializeCanvas(`${name}`).then((localMap)=>{
                 map = localMap.mymap;
-                console.log(localMap.imagesList);
-                console.log("cented on:");
-                console.log(localMap.imagesList[1]);
-                map.setView(localMap.imagesList[1].getBounds().getCenter(), 6);
+                // console.log(localMap.imagesList);
+                // console.log("cented on:");
+                // console.log(localMap.imagesList[1]);
+                // map.setView(localMap.imagesList[1].getBounds().getCenter(), 6);
             });
         });
     });

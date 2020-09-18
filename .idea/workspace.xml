@@ -108,8 +108,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/script-leaflet.js</url>
-          <line>300</line>
-          <properties lambdaOrdinal="-1" />
+          <line>294</line>
           <option name="timeStamp" value="1" />
         </line-breakpoint>
       </breakpoints>

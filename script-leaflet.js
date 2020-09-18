@@ -78,15 +78,7 @@ async function initializeCanvas(selectedArtistName) {
     restAllImages = shuffle(restAllImages);
 
     populatePanel(uniqueImagesPanel, restAllImages, selectedArtistName, imagesList, mymap).then(()=>{
-
         mymap.setZoom(6);
-
-        shuffle(artistNames);
-
-        // $.ajaxSetup({ // avoid array being populated asynchronously
-        //     async: false
-        // });
-
     });
 
     return {mymap, imagesList};
@@ -171,7 +163,9 @@ async function populatePanel(uniqueImagesPanel, restAllImages, selectedArtistNam
     });
 
     if (selectedArtistName === null || selectedArtistName === undefined) {
-        mymap.setView([viewFocusX, viewFocusY], 8)
+        mymap.setView([viewFocusX, viewFocusY], 8);
+    } else {
+        mymap.setView(imagesList[1].getBounds().getCenter(), 8)
     }
 }
 
@@ -217,10 +211,10 @@ function calculateMapLimits(imageBounds) {
 }
 
 async function moveImage(overlay, margin, direction, variableOrigin, variableOriginDifference, variableOriginY, variableOriginX, imageBounds, imageWidth, imageHeight, mymap, newImage, imagesList) {
-    let step = 1;
+    let step = 0.3;
     while (overlay || margin > 0) {
-        if (step >= 0.04) { // simulate decreasing step in moving images to offload processing.
-            step -= 0.03;
+        if (step >= 0.02) { // simulate decreasing step in moving images to offload processing.
+            step -= 0.01;
         }
         if (direction > 0) {
             variableOrigin += step;
@@ -298,7 +292,7 @@ function addImage(imagePath, direction, parent, imageWidth, imageHeight, toggleD
     let imageBounds = calculateImageBounds(variableOriginX, variableOriginY, imageWidth, imageHeight, mymap);
     let newImage = L.imageOverlay(imagePath, imageBounds, {opacity: opacity}).addTo(mymap);
 
-    let margin = getRandomInt(10, 15); // expressed in lat log. 1 unit = 2px; //TODO: configurable
+    let margin = getRandomInt(10, 20); // expressed in lat log. 1 unit = 2px; //TODO: configurable
 
     let variableOriginDifference = 0;
     moveImage(overlay, margin, direction, variableOrigin, variableOriginDifference,
