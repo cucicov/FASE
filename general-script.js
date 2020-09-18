@@ -8,11 +8,14 @@ function activateButton(infoButton) {
     infoButton.css("color", "white");
 }
 
-function hideBox(box) {
+function hideBox(box, callback=null) {
     box.animate({
         bottom: (box.height()*-1)-100
     }, 500, function () {
         // Animation complete.
+        if (callback !== null) {
+            callback();
+        }
     });
 }
 
@@ -24,11 +27,18 @@ function showBox(box) {
     });
 }
 
+function revealAllImages() {
+    $.each(imagesList, (index, image) => {
+        image.setOpacity(1);
+    })
+}
+
 $(document).ready(()=> {
     let map = initializeCanvas(null);
+    map.setZoom(5);
 
     $(".overlay").delay(2000).fadeOut(() => {
-        map.setZoom(5);
+        map.setZoom(6);
     });
 
     let artistBio = null;
@@ -42,6 +52,8 @@ $(document).ready(()=> {
     let kunstBox = $(".kunst-box");
     let infoNo = $(".info-no");
     let infoEn = $(".info-en");
+    let langNo = $(".lang-no");
+    let langEn = $(".lang-en");
 
     infoButton.click(() => {
         showBox(infoBox);
@@ -57,19 +69,31 @@ $(document).ready(()=> {
     });
 
     $(".kunst-close").click(() => {
-        hideBox(kunstBox);
+        hideBox(kunstBox, ()=> {
+            kunstnerInfo.hide();
+            kunstContent.show();
+        });
         desctivateButton(kunstButton);
+        revealAllImages();
     });
 
-    $(".lang-no").click(() => {
+    langNo.click(() => {
         infoNo.show();
         infoEn.hide();
+        langEn.css("font-weight", "normal");
+        langEn.css("text-decoration", "none");
+        langNo.css("font-weight", "bold");
+        langNo.css("text-decoration", "underline");
     });
 
 
-    $(".lang-en").click(() => {
+    langEn.click(() => {
         infoEn.show();
         infoNo.hide();
+        langNo.css("font-weight", "normal");
+        langNo.css("text-decoration", "none");
+        langEn.css("font-weight", "bold");
+        langEn.css("text-decoration", "underline");
     });
 
     kunstButton.click(() => {
@@ -108,6 +132,9 @@ $(document).ready(()=> {
             $(".kunstner-info .stedtid").html(artistBio[name].stedtid);
             $(".kunstner-info .project-description").html(artistBio[name].text);
             $(".kunstner-info .kunstner-bio").html(artistBio[name].bio);
+
+            console.log(imagesList[1].getBounds().getCenter());
+            map.setView(imagesList[1].getBounds().getCenter(), 6);
         });
     });
 

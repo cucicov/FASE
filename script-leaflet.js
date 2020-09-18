@@ -1,16 +1,21 @@
 const MAP_PAN_MARGIN = 20;
 
 let viewFocusX = 0.0;
-let viewFocusY = 0.0;
+let viewFocusY = 20.0;
 
 let latLimit = [0, 0];
 let lonLimit = [0, 0];
 
 let artistNames = [];
+let imagesList = [];
 
 function initializeCanvas(selectedArtistName) {
+    imagesList = [];
+    viewFocusX = 0.0;
+    viewFocusY = 20.0;
+    latLimit = [0, 0];
+    lonLimit = [0, 0];
 
-    var imagesList = [];
     $.ajaxSetup({ // avoid array being populated asynchronously
         async: false
     });
@@ -133,12 +138,15 @@ function calculateNextDirectionAndViewFocus(toggleDirection, direction) {
 }
 
 function insertFinalImages(restAllImages, direction, toggleDirection, opacity, imagesList, mymap) {
+    // let counter = 0;
+    // while (counter < )
     $.each(restAllImages, (index, imageFullPath) => {
         let imageData = getImageData(imageFullPath);
         let parent = imagesList[imagesList.length - 1]; //get last image added as parent for the next image.
 
         imagesList.push(
-            addImage(imageFullPath, direction, parent, imageData.width, imageData.height, toggleDirection, opacity, mymap, imagesList));
+            addImage(imageFullPath, direction, parent, imageData.width,
+                imageData.height, toggleDirection, opacity, mymap, imagesList));
 
         const __ret = calculateNextDirectionAndViewFocus(toggleDirection, direction);
         toggleDirection = __ret.toggleDirection;

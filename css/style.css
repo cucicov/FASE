@@ -3,7 +3,7 @@ body {
     padding: 0;
     margin: 0;
     font-family: 'Titillium Web', sans-serif;
-    font-size: 11px;
+    font-size: 13px;
 }
 html, body, #mapid {
     height: 100%;
@@ -11,15 +11,44 @@ html, body, #mapid {
     background: #fff
 }
 
+body a {
+    color: #000;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+body a:hover {
+    text-decoration: none;
+    color: #000;
+}
+
 .overlay {
-    opacity:0.5;
-    background-color:#000;
+    background-color:rgba(0, 0, 0, 0.5);
     position:fixed;
     width:100%;
     height:100%;
     top:0px;
     left:0px;
     z-index:1000;
+}
+
+.overlay .container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 100%;
+}
+
+.fase-intro-title {
+    font-size: 300px;
+    color: #fff;
+    margin-bottom: -70px;
+}
+
+.fase-intro-desc {
+    font-size: 28px;
+    color: #fff;
 }
 
 .leaflet-container a {
@@ -50,7 +79,6 @@ html, body, #mapid {
 }
 
 .menu-button {
-    padding: 0px 20px;
     background: white;
     width: 100px;
     border: 1px solid black;
@@ -61,7 +89,7 @@ html, body, #mapid {
 }
 
 .info-box, .kunst-box {
-    padding: 20px 20px;
+    padding: 30px 30px;
     position: fixed;
     bottom: -9999px;
     right: 50px;
@@ -73,8 +101,22 @@ html, body, #mapid {
     border: 1px solid black;
 }
 
+.kunst-box a {
+    text-decoration: none;
+    font-weight: normal;
+    font-size: 20px;
+}
+
+.kunst-box a:hover {
+    font-weight: bold;
+}
+
+.info-box-title, .info-box-languages, .kunst-box-title {
+    margin-bottom: 30px;
+}
+
 .info-content {
-    height: calc(100vh - 170px);
+    height: calc(100vh - 250px);
     overflow-y: auto;
 }
 
@@ -88,4 +130,55 @@ html, body, #mapid {
 
 .kunstner-back {
     display: none;
+}
+
+.info-box-languages a {
+    font-weight: normal;
+    text-decoration: none;
+}
+
+.kunst-content {
+    height: calc(100vh - 250px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.kunst-content .row {
+    margin-bottom: 15px;
+}
+
+.kunstner-info {
+    height: calc(100vh - 250px);
+    overflow-y: auto;
+    overflow-x: hidden;
+}
+
+.kunstern-name {
+    font-size: 16px;
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.project-name {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 15px;
+}
+
+.stedtid {
+    font-size: 16px;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+.project-description {
+    font-size: 16px;
+    margin-bottom: 30px;
+    font-weight: normal;
+}
+
+.kunstner-bio {
+    font-size: 16px;
+    margin-bottom: 30px;
+    font-weight: normal;
 }

@@ -12,6 +12,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <!--    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>-->
+    <link rel="icon" type="image/x-icon" href="resources/favicon.ico"/>
     <script src="jquery-3.5.1.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
@@ -24,7 +25,20 @@
 </head>
 <body>
 
-<div class="overlay"></div>
+<div class="overlay">
+    <div class="container">
+        <div class="row justify-content-center text-center fase-intro-title">
+            <div class="col-sm-7 align-self-center">
+                FASE
+            </div>
+        </div>
+        <div class="row justify-content-center text-center fase-intro-desc">
+            <div class="col-sm-7 align-self-center">
+                En online utstilling av Mørkerommet fotokollektiv i samarbeid med Prøverommet.
+            </div>
+        </div>
+    </div>
+</div>
 
 <div id="mapid">
 </div>
@@ -37,65 +51,54 @@
 </div>
 
 <div class="info-box">
-    <div class="row">
+    <div class="row info-box-title">
         <div class="col-sm"><b>FASE</b></div>
-        <a href="#"><div class="col-sm-1 info-close"><img src="resources/icon-placeholder.jpg"></div></a>
+        <a href="#"><div class="col-sm-1 info-close"><img src="resources/close.svg"></div></a>
     </div>
-    <div class="row">
-        <a href="#"><div class="col-sm lang-no">Norsk</div></a>
-        <a href="#"><div class="col-sm lang-en">English</div></a>
+    <div class="row info-box-languages">
+        <a href="#"><div class="col-sm lang-no">NORSK</div></a>
+        <a href="#"><div class="col-sm lang-en">ENGLISH</div></a>
     </div>
     <div class="row info-content">
         <div class="col-sm info-no">
-            NO ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum, lacus et pretium pulvinar, quam dui finibus felis, id dapibus nisi odio a est. Vestibulum arcu mi, fringilla a mauris sit amet, aliquam placerat metus. Donec laoreet congue vehicula. Sed magna lorem, feugiat cursus molestie eu, tincidunt nec quam. Mauris vel interdum odio. Aenean vestibulum enim in eros imperdiet, in maximus est scelerisque. Pellentesque efficitur non turpis a tempus. Suspendisse potenti. Nunc vitae arcu vitae mi elementum pretium.
-            <br/><br/>
-            Aliquam cursus nulla eu risus suscipit euismod. Curabitur laoreet iaculis magna et vestibulum. Quisque consequat iaculis mattis. Nunc non dui mattis, mattis purus id, fringilla dui. Quisque pellentesque nunc non nulla ultrices, eget gravida leo dignissim. Sed eleifend tortor et nibh finibus convallis. Praesent imperdiet ipsum tortor, sed malesuada leo porta a. Maecenas convallis pellentesque elit. Aliquam ac justo at velit rutrum fringilla. Sed tristique diam sit amet dui pharetra suscipit. Fusce laoreet ac leo a consequat.
-            <br/><br/>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum, lacus et pretium pulvinar, quam dui finibus felis, id dapibus nisi odio a est. Vestibulum arcu mi, fringilla a mauris sit amet, aliquam placerat metus. Donec laoreet congue vehicula. Sed magna lorem, feugiat cursus molestie eu, tincidunt nec quam. Mauris vel interdum odio. Aenean vestibulum enim in eros imperdiet, in maximus est scelerisque. Pellentesque efficitur non turpis a tempus. Suspendisse potenti. Nunc vitae arcu vitae mi elementum pretium.
-            <br/><br/>
-            Aliquam cursus nulla eu risus suscipit euismod. Curabitur laoreet iaculis magna et vestibulum. Quisque consequat iaculis mattis. Nunc non dui mattis, mattis purus id, fringilla dui. Quisque pellentesque nunc non nulla ultrices, eget gravida leo dignissim. Sed eleifend tortor et nibh finibus convallis. Praesent imperdiet ipsum tortor, sed malesuada leo porta a. Maecenas convallis pellentesque elit. Aliquam ac justo at velit rutrum fringilla. Sed tristique diam sit amet dui pharetra suscipit. Fusce laoreet ac leo a consequat.
-            <br/><br/>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum, lacus et pretium pulvinar, quam dui finibus felis, id dapibus nisi odio a est. Vestibulum arcu mi, fringilla a mauris sit amet, aliquam placerat metus. Donec laoreet congue vehicula. Sed magna lorem, feugiat cursus molestie eu, tincidunt nec quam. Mauris vel interdum odio. Aenean vestibulum enim in eros imperdiet, in maximus est scelerisque. Pellentesque efficitur non turpis a tempus. Suspendisse potenti. Nunc vitae arcu vitae mi elementum pretium.
-            <br/><br/>
-            Aliquam cursus nulla eu risus suscipit euismod. Curabitur laoreet iaculis magna et vestibulum. Quisque consequat iaculis mattis. Nunc non dui mattis, mattis purus id, fringilla dui. Quisque pellentesque nunc non nulla ultrices, eget gravida leo dignissim. Sed eleifend tortor et nibh finibus convallis. Praesent imperdiet ipsum tortor, sed malesuada leo porta a. Maecenas convallis pellentesque elit. Aliquam ac justo at velit rutrum fringilla. Sed tristique diam sit amet dui pharetra suscipit. Fusce laoreet ac leo a consequat.
-            <br/><br/>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum, lacus et pretium pulvinar, quam dui finibus felis, id dapibus nisi odio a est. Vestibulum arcu mi, fringilla a mauris sit amet, aliquam placerat metus. Donec laoreet congue vehicula. Sed magna lorem, feugiat cursus molestie eu, tincidunt nec quam. Mauris vel interdum odio. Aenean vestibulum enim in eros imperdiet, in maximus est scelerisque. Pellentesque efficitur non turpis a tempus. Suspendisse potenti. Nunc vitae arcu vitae mi elementum pretium.
-            <br/><br/>
-            Aliquam cursus nulla eu risus suscipit euismod. Curabitur laoreet iaculis magna et vestibulum. Quisque consequat iaculis mattis. Nunc non dui mattis, mattis purus id, fringilla dui. Quisque pellentesque nunc non nulla ultrices, eget gravida leo dignissim. Sed eleifend tortor et nibh finibus convallis. Praesent imperdiet ipsum tortor, sed malesuada leo porta a. Maecenas convallis pellentesque elit. Aliquam ac justo at velit rutrum fringilla. Sed tristique diam sit amet dui pharetra suscipit. Fusce laoreet ac leo a consequat.
-            <br/><br/>
+            Vi er glade for å kunne presentere <b>FASE</b>, en online utstilling av Mørkerommet fotokollektiv i samarbeid med <a href="http://proiectb.org">Prøverommet</a>.
+            <br/></br>
+            Is smelter til vann, vann fordamper og steiner brytes sakte ned til sand. Du blunker, og befinner deg i et øyeblikk på et hotellrom i Riga. Alle de kaotiske utprøvende periodene man går igjennom i løpet av livet. FASE er å være i transit, å være i en mellomtilstand -- en prosess man hverken helt vet når startet, eller har tenkt å slutte.
+            <br/></br>
+            I utstillingen tar faser mange former. Tuva Tørresdal sine bilder ser på et par som befinner seg ved et veiskille, og som ser ut til å trekke sammen og fra hverandre i takt med bølgene rundt.
+            Amalie Trones sine bilder tar et mer geologisk perspektiv når hun retter kameraet mot bergene ute i havgapet ved Sotra, som fortsatt sakte slipes ned, sandkorn for sandkorn, av den sure vinden og bølgene.
+            Til slutt kan vi nevne hvordan Pål Bringes eksperimenter med dobbelteksponeringer nærmest bygger en limboverden, med trær som glir over i teksturene fra sjøen, og med grener som flettes sammen for å skape drømmeaktige teksturer.
+            <br/></br>
+            Vi vil gjerne takke alle som har bidratt med bilder, Prøverommet og grafiske designere Christian XX og Hans Jørgen Moldung.
+            Vel “møtt”
+            <br/></br>
         </div>
         <div class="col-sm info-en">
-            EN ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum, lacus et pretium pulvinar, quam dui finibus felis, id dapibus nisi odio a est. Vestibulum arcu mi, fringilla a mauris sit amet, aliquam placerat metus. Donec laoreet congue vehicula. Sed magna lorem, feugiat cursus molestie eu, tincidunt nec quam. Mauris vel interdum odio. Aenean vestibulum enim in eros imperdiet, in maximus est scelerisque. Pellentesque efficitur non turpis a tempus. Suspendisse potenti. Nunc vitae arcu vitae mi elementum pretium.
+            We present <b>FASE</b>, an online exhibition by Mørkerommet fotokollektiv in collaboration with <a href="http://proiectb.org">Prøverommet</a>.
             <br/><br/>
-            Aliquam cursus nulla eu risus suscipit euismod. Curabitur laoreet iaculis magna et vestibulum. Quisque consequat iaculis mattis. Nunc non dui mattis, mattis purus id, fringilla dui. Quisque pellentesque nunc non nulla ultrices, eget gravida leo dignissim. Sed eleifend tortor et nibh finibus convallis. Praesent imperdiet ipsum tortor, sed malesuada leo porta a. Maecenas convallis pellentesque elit. Aliquam ac justo at velit rutrum fringilla. Sed tristique diam sit amet dui pharetra suscipit. Fusce laoreet ac leo a consequat.
+            Ice melts into water, water evaporates and rocks slowly break down into sand. You blink and find yourself in a moment in a hotel room in Riga. All the chaotic testing periods you go through in life. FASE is to be in transit, to be in an intermediate state - a process that is neither fully known when started, nor intended to end.
             <br/><br/>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum, lacus et pretium pulvinar, quam dui finibus felis, id dapibus nisi odio a est. Vestibulum arcu mi, fringilla a mauris sit amet, aliquam placerat metus. Donec laoreet congue vehicula. Sed magna lorem, feugiat cursus molestie eu, tincidunt nec quam. Mauris vel interdum odio. Aenean vestibulum enim in eros imperdiet, in maximus est scelerisque. Pellentesque efficitur non turpis a tempus. Suspendisse potenti. Nunc vitae arcu vitae mi elementum pretium.
-            <br/><br/>
-            Aliquam cursus nulla eu risus suscipit euismod. Curabitur laoreet iaculis magna et vestibulum. Quisque consequat iaculis mattis. Nunc non dui mattis, mattis purus id, fringilla dui. Quisque pellentesque nunc non nulla ultrices, eget gravida leo dignissim. Sed eleifend tortor et nibh finibus convallis. Praesent imperdiet ipsum tortor, sed malesuada leo porta a. Maecenas convallis pellentesque elit. Aliquam ac justo at velit rutrum fringilla. Sed tristique diam sit amet dui pharetra suscipit. Fusce laoreet ac leo a consequat.
-            <br/><br/>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum, lacus et pretium pulvinar, quam dui finibus felis, id dapibus nisi odio a est. Vestibulum arcu mi, fringilla a mauris sit amet, aliquam placerat metus. Donec laoreet congue vehicula. Sed magna lorem, feugiat cursus molestie eu, tincidunt nec quam. Mauris vel interdum odio. Aenean vestibulum enim in eros imperdiet, in maximus est scelerisque. Pellentesque efficitur non turpis a tempus. Suspendisse potenti. Nunc vitae arcu vitae mi elementum pretium.
-            <br/><br/>
-            Aliquam cursus nulla eu risus suscipit euismod. Curabitur laoreet iaculis magna et vestibulum. Quisque consequat iaculis mattis. Nunc non dui mattis, mattis purus id, fringilla dui. Quisque pellentesque nunc non nulla ultrices, eget gravida leo dignissim. Sed eleifend tortor et nibh finibus convallis. Praesent imperdiet ipsum tortor, sed malesuada leo porta a. Maecenas convallis pellentesque elit. Aliquam ac justo at velit rutrum fringilla. Sed tristique diam sit amet dui pharetra suscipit. Fusce laoreet ac leo a consequat.
-            <br/><br/>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi interdum, lacus et pretium pulvinar, quam dui finibus felis, id dapibus nisi odio a est. Vestibulum arcu mi, fringilla a mauris sit amet, aliquam placerat metus. Donec laoreet congue vehicula. Sed magna lorem, feugiat cursus molestie eu, tincidunt nec quam. Mauris vel interdum odio. Aenean vestibulum enim in eros imperdiet, in maximus est scelerisque. Pellentesque efficitur non turpis a tempus. Suspendisse potenti. Nunc vitae arcu vitae mi elementum pretium.
-            <br/><br/>
-            Aliquam cursus nulla eu risus suscipit euismod. Curabitur laoreet iaculis magna et vestibulum. Quisque consequat iaculis mattis. Nunc non dui mattis, mattis purus id, fringilla dui. Quisque pellentesque nunc non nulla ultrices, eget gravida leo dignissim. Sed eleifend tortor et nibh finibus convallis. Praesent imperdiet ipsum tortor, sed malesuada leo porta a. Maecenas convallis pellentesque elit. Aliquam ac justo at velit rutrum fringilla. Sed tristique diam sit amet dui pharetra suscipit. Fusce laoreet ac leo a consequat.
+            In the exhibition, phases take many forms. Tuva Tørresdal's pictures look at a couple who are at a crossroad, and who seem to pull together and apart in tandem with the waves around.
+            Amalie Trones' photos take a more geological perspective when she points the camera at the mountains in the sea gap at Sotra, which is still slowly being sanded, grain by sand, by the sour wind and waves.
+            Finally, we can mention how Pål Bringe's double-exposure experiments almost build a limbo world, with trees gliding over the sea textures, and with branches intertwined to create dreamlike textures.
             <br/><br/>
         </div>
-        <div class="row">
-            <a href="http://proiectb.org" target="_blank"><div class="col-sm"><img src="logos/bitteatergarajen.svg"/></div></a>
-            <a href="http://proiectb.org" target="_blank"><div class="col-sm"><img src="logos/Mørkerommet.svg"/></div></a>
-            <a href="http://proiectb.org" target="_blank"><div class="col-sm"><img src="logos/Prøverommet.svg"/></div></a>
+        <div class="container mt-auto">
+            <div class="row text-center">
+                <a href="http://proiectb.org" target="_blank"><div class="col-sm"><img src="logos/bitteatergarajen.svg"/></div></a>
+                <a href="http://proiectb.org" target="_blank"><div class="col-sm"><img src="logos/Mørkerommet.svg"/></div></a>
+                <a href="http://proiectb.org" target="_blank"><div class="col-sm"><img src="logos/Prøverommet.svg"/></div></a>
+            </div>
         </div>
     </div>
 
 </div>
 
 <div class="kunst-box">
-    <div class="row">
-        <a href="#"><div class="col-sm-1 kunstner-back"><img src="resources/icon-placeholder.jpg"></div></a>
-        <div class="col-sm"><b>KUNSTNERE</b></div>
-        <a href="#"><div class="col-sm-1 kunst-close"><img src="resources/icon-placeholder.jpg"></div></a>
+    <div class="row align-items-center kunst-box-title">
+        <a href="#"><div class="col-sm-1 kunstner-back"><img src="resources/arrow-left.svg"></div></a>
+        <div class="col-sm pt-1"><b>KUNSTNERE</b></div>
+        <a href="#"><div class="col-sm-1 kunst-close"><img src="resources/close.svg"></div></a>
     </div>
     <div class="kunst-content">
     </div>
