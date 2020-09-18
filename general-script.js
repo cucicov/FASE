@@ -48,7 +48,7 @@ async function showKunstnerContent() {
 $(document).ready(()=> {
     let map = null;
     initializeCanvas(null).then((localMap) => {
-        map = localMap;
+        map = localMap.mymap;
         map.setZoom(5);
     });
 
@@ -87,6 +87,7 @@ $(document).ready(()=> {
         hideBox(kunstBox, ()=> {
             kunstnerInfo.hide();
             kunstContent.show();
+            kunstnerBackButton.hide();
         });
         desctivateButton(kunstButton);
         revealAllImages();
@@ -127,7 +128,7 @@ $(document).ready(()=> {
         showKunstnerContent();
         map.remove();
         initializeCanvas(null).then((localMap)=>{
-            map = localMap;
+            map = localMap.mymap;
         });
     });
 
@@ -148,8 +149,11 @@ $(document).ready(()=> {
 
             map.remove();
             initializeCanvas(`${name}`).then((localMap)=>{
-                map = localMap;
-                map.setView(imagesList[1].getBounds().getCenter(), 6);
+                map = localMap.mymap;
+                console.log(localMap.imagesList);
+                console.log("cented on:");
+                console.log(localMap.imagesList[1]);
+                map.setView(localMap.imagesList[1].getBounds().getCenter(), 6);
             });
         });
     });

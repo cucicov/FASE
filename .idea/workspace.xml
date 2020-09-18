@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="9809a27c-1fee-4a72-b896-fb1ce261b47b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/artist-about.json" beforeDir="false" afterPath="$PROJECT_DIR$/artist-about.json" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/general-script.js" beforeDir="false" afterPath="$PROJECT_DIR$/general-script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/script-leaflet.js" beforeDir="false" afterPath="$PROJECT_DIR$/script-leaflet.js" afterDir="false" />
     </list>
@@ -70,7 +69,7 @@
       <workItem from="1599914872413" duration="30518000" />
       <workItem from="1600103232118" duration="543000" />
       <workItem from="1600416640146" duration="146000" />
-      <workItem from="1600417138770" duration="17472000" />
+      <workItem from="1600417138770" duration="19833000" />
     </task>
     <servers />
   </component>
@@ -109,7 +108,7 @@
       <breakpoints>
         <line-breakpoint enabled="true" type="javascript">
           <url>file://$PROJECT_DIR$/script-leaflet.js</url>
-          <line>294</line>
+          <line>300</line>
           <properties lambdaOrdinal="-1" />
           <option name="timeStamp" value="1" />
         </line-breakpoint>
