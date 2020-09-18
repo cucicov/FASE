@@ -9,7 +9,7 @@ let lonLimit = [0, 0];
 let artistNames = [];
 let imagesList = [];
 
-function initializeCanvas(selectedArtistName) {
+async function initializeCanvas(selectedArtistName) {
     imagesList = [];
     viewFocusX = 0.0;
     viewFocusY = 20.0;
@@ -77,13 +77,17 @@ function initializeCanvas(selectedArtistName) {
     uniqueImagesPanel = shuffle(uniqueImagesPanel);
     restAllImages = shuffle(restAllImages);
 
-    populatePanel(uniqueImagesPanel, restAllImages, selectedArtistName, imagesList, mymap);
+    populatePanel(uniqueImagesPanel, restAllImages, selectedArtistName, imagesList, mymap).then(()=>{
 
-    mymap.setZoom(6);
+        mymap.setZoom(6);
 
-    console.log("View Focus: X=" + viewFocusX + " Y=" + viewFocusY);
+        shuffle(artistNames);
 
-    shuffle(artistNames);
+        // $.ajaxSetup({ // avoid array being populated asynchronously
+        //     async: false
+        // });
+
+    });
 
     return mymap;
 }
@@ -137,9 +141,10 @@ function calculateNextDirectionAndViewFocus(toggleDirection, direction) {
     return {toggleDirection, direction};
 }
 
-function insertFinalImages(restAllImages, direction, toggleDirection, opacity, imagesList, mymap) {
-    // let counter = 0;
-    // while (counter < )
+async function insertFinalImages(restAllImages, direction, toggleDirection, opacity, imagesList, mymap) {
+    // $.ajaxSetup({ // avoid array being populated asynchronously
+    //     async: true
+    // });
     $.each(restAllImages, (index, imageFullPath) => {
         let imageData = getImageData(imageFullPath);
         let parent = imagesList[imagesList.length - 1]; //get last image added as parent for the next image.
@@ -152,16 +157,18 @@ function insertFinalImages(restAllImages, direction, toggleDirection, opacity, i
         toggleDirection = __ret.toggleDirection;
         direction = __ret.direction;
     });
-    return {direction, toggleDirection};
+    return {direction, toggleDirection, imagesList, mymap};
 }
 
-function populatePanel(uniqueImagesPanel, restAllImages, selectedArtistName, imagesList, mymap) {
+async function populatePanel(uniqueImagesPanel, restAllImages, selectedArtistName, imagesList, mymap) {
     let direction = 2; // starting direction right
     let toggleDirection = 1; // switch between adding to the right and adding to the left
 
     let customOpacity = (selectedArtistName === null || selectedArtistName === undefined) ? 1 : 0.2;
-    insertFinalImages(uniqueImagesPanel, direction, toggleDirection, 1, imagesList, mymap);
-    insertFinalImages(restAllImages, direction, toggleDirection, customOpacity, imagesList, mymap);
+    insertFinalImages(uniqueImagesPanel, direction, toggleDirection, 1, imagesList, mymap)
+        .then((ret)=> {
+        insertFinalImages(restAllImages, ret.direction, ret.toggleDirection, customOpacity, ret.imagesList, ret.mymap);
+    });
 
     mymap.setView([viewFocusX, viewFocusY], 8)
 }
@@ -207,6 +214,48 @@ function calculateMapLimits(imageBounds) {
     }
 }
 
+async function moveImage(overlay, margin, direction, variableOrigin, variableOriginDifference, variableOriginY, variableOriginX, imageBounds, imageWidth, imageHeight, mymap, newImage, imagesList) {
+    while (overlay || margin > 0) {
+        if (direction > 0) {
+            variableOrigin += 0.07;
+            variableOriginDifference += 0.07;
+        } else {
+            variableOrigin -= 0.07;
+            variableOriginDifference -= 0.07;
+        }
+        if (direction % 2 === 0) {
+            variableOriginY = variableOrigin;
+        } else {
+            variableOriginX = variableOrigin;
+        }
+
+        imageBounds = calculateImageBounds(variableOriginX, variableOriginY, imageWidth, imageHeight, mymap);
+        newImage.setBounds(imageBounds);
+
+        // mechanism to avoid too stretched cloud formations.
+        if (Math.abs(variableOriginDifference) > 50) {
+            direction = getNextDirection(direction) * -1;
+            variableOriginDifference = 0;
+            variableOrigin = variableOrigin / 4;
+        }
+
+        // mechanism to simulate break. once an overlay is detected -> move the image and check again.
+        let notIntersection = true;
+        $.each(imagesList, (index, localImage) => {
+            notIntersection = notIntersection && !localImage.getBounds().intersects(newImage.getBounds());
+            if (!notIntersection) {
+                return false;
+            }
+        });
+
+        overlay = !notIntersection;
+        if (!overlay) {
+            margin = margin - 1;
+        }
+    }
+    return {direction, variableOriginY, variableOriginX, imageBounds};
+}
+
 function addImage(imagePath, direction, parent, imageWidth, imageHeight, toggleDirection, opacity, mymap, imagesList) {
     // direction:
     // 1 = UP
@@ -243,46 +292,20 @@ function addImage(imagePath, direction, parent, imageWidth, imageHeight, toggleD
     let imageBounds = calculateImageBounds(variableOriginX, variableOriginY, imageWidth, imageHeight, mymap);
     let newImage = L.imageOverlay(imagePath, imageBounds, {opacity: opacity}).addTo(mymap);
 
-    let margin = getRandomInt(20, 80); // expressed in lat log. 1 unit = 2px; //TODO: configurable
+    let margin = getRandomInt(15, 20); // expressed in lat log. 1 unit = 2px; //TODO: configurable
 
     let variableOriginDifference = 0;
-    while (overlay || margin > 0) {
-        if (direction > 0) {
-            variableOrigin += 0.01;
-            variableOriginDifference += 0.01;
-        } else {
-            variableOrigin -= 0.01;
-            variableOriginDifference -= 0.01;
-        }
-        if (direction % 2 === 0) {
-            variableOriginY = variableOrigin;
-        } else {
-            variableOriginX = variableOrigin;
-        }
-
-        imageBounds = calculateImageBounds(variableOriginX, variableOriginY, imageWidth, imageHeight, mymap);
-        newImage.setBounds(imageBounds);
-
-        // mechanism to avoid too stretched cloud formations.
-        if (Math.abs(variableOriginDifference) > 50) {
-            direction = getNextDirection(direction) * -1;
-            variableOriginDifference = 0;
-            variableOrigin = variableOrigin / 4;
-        }
-
-        // mechanism to simulate break. once an overlay is detected -> move the image and check again.
-        let notIntersection = true;
-        imagesList.forEach((localImage) => {
-            notIntersection = notIntersection && !localImage.getBounds().intersects(newImage.getBounds());
-        });
-
-        overlay = !notIntersection;
-        if (!overlay) {
-            margin = margin - 1;
-        }
-    }
-
-    calculateMapLimits(imageBounds);
+    moveImage(overlay, margin, direction, variableOrigin, variableOriginDifference,
+        variableOriginY, variableOriginX, imageBounds, imageWidth,
+        imageHeight, mymap, newImage, imagesList).then((__ret ) => {
+        direction = __ret.direction;
+        variableOriginY = __ret.variableOriginY;
+        variableOriginX = __ret.variableOriginX;
+        imageBounds = __ret.imageBounds;
+        calculateMapLimits(imageBounds);
+        console.log("finished moving");
+    });
+    console.log("finished just adding image");
 
     return newImage;
 }

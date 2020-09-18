@@ -1,3 +1,7 @@
+$.ajaxSetup({ // avoid array being populated asynchronously
+    async: false
+});
+
 function desctivateButton(infoButton) {
     infoButton.css("background", "white");
     infoButton.css("color", "black");
@@ -13,6 +17,7 @@ function hideBox(box, callback=null) {
         bottom: (box.height()*-1)-100
     }, 500, function () {
         // Animation complete.
+        box.hide();
         if (callback !== null) {
             callback();
         }
@@ -20,6 +25,7 @@ function hideBox(box, callback=null) {
 }
 
 function showBox(box) {
+    box.show();
     box.animate({
         bottom: 60
     }, 500, function () {
@@ -33,9 +39,18 @@ function revealAllImages() {
     })
 }
 
+async function showKunstnerContent() {
+    $(".kunstner-back").hide();
+    $(".kunstner-info").hide();
+    $(".kunst-content").show();
+}
+
 $(document).ready(()=> {
-    let map = initializeCanvas(null);
-    map.setZoom(5);
+    let map = null;
+    initializeCanvas(null).then((localMap) => {
+        map = localMap;
+        map.setZoom(5);
+    });
 
     $(".overlay").delay(2000).fadeOut(() => {
         map.setZoom(6);
@@ -109,20 +124,18 @@ $(document).ready(()=> {
     });
 
     kunstnerBackButton.click(() => {
-        kunstnerBackButton.hide();
-        kunstnerInfo.hide();
-        kunstContent.show();
+        showKunstnerContent();
         map.remove();
-        map = initializeCanvas(null);
+        initializeCanvas(null).then((localMap)=>{
+            map = localMap;
+        });
     });
 
     $.each(artistNames, (index, name) => {
         $(".kunst-content").append(`<div class="row">
-                                        <a href="#"><div class="col-sm ${name}">${name}</div></a>
+                                        <a href="#"><div class="col-sm ${name}">${artistBio[name].name}</div></a>
                                         </div>`);
         $(`.${name}`).click(() => {
-            map.remove();
-            map = initializeCanvas(`${name}`);
             kunstnerBackButton.show();
             kunstContent.hide();
             kunstnerInfo.show();
@@ -133,8 +146,11 @@ $(document).ready(()=> {
             $(".kunstner-info .project-description").html(artistBio[name].text);
             $(".kunstner-info .kunstner-bio").html(artistBio[name].bio);
 
-            console.log(imagesList[1].getBounds().getCenter());
-            map.setView(imagesList[1].getBounds().getCenter(), 6);
+            map.remove();
+            initializeCanvas(`${name}`).then((localMap)=>{
+                map = localMap;
+                map.setView(imagesList[1].getBounds().getCenter(), 6);
+            });
         });
     });
 
