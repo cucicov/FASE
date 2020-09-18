@@ -2,9 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="9809a27c-1fee-4a72-b896-fb1ce261b47b" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/dictionaries/cucicov.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/general-script.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leaflet-src.esm.js" beforeDir="false" afterPath="$PROJECT_DIR$/leaflet-src.esm.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/leaflet-src.js" beforeDir="false" afterPath="$PROJECT_DIR$/leaflet-src.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/script.js" beforeDir="false" afterPath="$PROJECT_DIR$/script-leaflet.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -13,6 +17,9 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/script-leaflet.js" root0="SKIP_INSPECTION" />
   </component>
   <component name="ProjectId" id="1gy2WnnmMtbvYcWFUIedHSoa0fJ" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
@@ -26,7 +33,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/images/annaMelbye" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -37,18 +44,18 @@
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/images/artist2" />
+      <recent name="$PROJECT_DIR$/images/artist1" />
+      <recent name="$PROJECT_DIR$/images" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
       <recent name="$PROJECT_DIR$/images/annaMelbye" />
       <recent name="$PROJECT_DIR$/images/amalieTrones" />
       <recent name="$PROJECT_DIR$/images/adaMiko" />
       <recent name="$PROJECT_DIR$/images/andreasTystad" />
-      <recent name="$PROJECT_DIR$/images" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/images/artist2" />
-      <recent name="$PROJECT_DIR$/images/artist1" />
-      <recent name="$PROJECT_DIR$/images" />
-      <recent name="$PROJECT_DIR$" />
     </key>
   </component>
   <component name="SvnConfiguration">
@@ -72,23 +79,27 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="459" y="44" key="RollbackChangesDialog" timestamp="1600027551759">
+    <state x="96" y="123" width="1080" height="577" key="DiffContextDialog" timestamp="1600366955157">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="459" y="44" key="RollbackChangesDialog/0.23.1280.777/1280.23.1280.1001@0.23.1280.777" timestamp="1600027551759" />
+    <state x="96" y="123" width="1080" height="577" key="DiffContextDialog/0.23.1280.777/1280.23.1280.1001@0.23.1280.777" timestamp="1600366955157" />
+    <state x="459" y="44" key="RollbackChangesDialog" timestamp="1600381422762">
+      <screen x="0" y="23" width="1280" height="777" />
+    </state>
+    <state x="459" y="44" key="RollbackChangesDialog/0.23.1280.777/1280.23.1280.1001@0.23.1280.777" timestamp="1600381422762" />
     <state x="100" y="123" width="1080" height="577" key="com.intellij.history.integration.ui.views.FileHistoryDialog" timestamp="1599372206723">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
     <state x="100" y="123" width="1080" height="577" key="com.intellij.history.integration.ui.views.FileHistoryDialog/1280.-476.1920.1057/0.23.1280.777@0.23.1280.777" timestamp="1599372206723" />
-    <state x="298" y="33" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1600336516754">
+    <state x="298" y="33" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1600386966507">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="298" y="33" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1280.777/1280.23.1280.1001@0.23.1280.777" timestamp="1600336516754" />
+    <state x="298" y="33" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.23.1280.777/1280.23.1280.1001@0.23.1280.777" timestamp="1600386966507" />
     <state x="298" y="33" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/1280.-476.1920.1057/0.23.1280.777@0.23.1280.777" timestamp="1599339510024" />
-    <state x="424" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600292339252">
+    <state x="424" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1600387833262">
       <screen x="0" y="23" width="1280" height="777" />
     </state>
-    <state x="424" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.777/1280.23.1280.1001@0.23.1280.777" timestamp="1600292339252" />
+    <state x="424" y="330" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.23.1280.777/1280.23.1280.1001@0.23.1280.777" timestamp="1600387833262" />
     <state x="301" y="62" width="670" height="676" key="search.everywhere.popup" timestamp="1600287008251">
       <screen x="0" y="23" width="1280" height="777" />
     </state>

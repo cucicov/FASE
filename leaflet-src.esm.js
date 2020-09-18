@@ -2234,7 +2234,7 @@ function removeDoubleTapListener(obj, id) {
 
 
 // @property TRANSFORM: String
-// Vendor-prefixed transform style name (e.g. `'webkitTransform'` for WebKit).
+// Vendor-prefixed transform css name (e.g. `'webkitTransform'` for WebKit).
 var TRANSFORM = testProp(
 	['transform', 'webkitTransform', 'OTransform', 'MozTransform', 'msTransform']);
 
@@ -2242,7 +2242,7 @@ var TRANSFORM = testProp(
 // the same for the transitionend event, in particular the Android 4.1 stock browser
 
 // @property TRANSITION: String
-// Vendor-prefixed transition style name.
+// Vendor-prefixed transition css name.
 var TRANSITION = testProp(
 	['webkitTransition', 'transition', 'OTransition', 'MozTransition', 'msTransition']);
 
@@ -2260,7 +2260,7 @@ function get(id) {
 }
 
 // @function getStyle(el: HTMLElement, styleAttrib: String): String
-// Returns the value for a certain style attribute on an element,
+// Returns the value for a certain css attribute on an element,
 // including computed values or values set through CSS.
 function getStyle(el, style) {
 	var value = el.style[style] || (el.currentStyle && el.currentStyle[style]);
@@ -2410,8 +2410,8 @@ function _setOpacityIE(el, value) {
 }
 
 // @function testProp(props: String[]): String|false
-// Goes through the array of style names and returns the first name
-// that is a valid style name for an element. If no such name is found,
+// Goes through the array of css names and returns the first name
+// that is a valid css name for an element. If no such name is found,
 // it returns false. Useful for vendor-prefixed styles like `transform`.
 function testProp(props) {
 	var style = document.documentElement.style;
@@ -6989,7 +6989,7 @@ var FeatureGroup = LayerGroup.extend({
 		return this.fire('layerremove', {layer: layer});
 	},
 
-	// @method setStyle(style: Path options): this
+	// @method setStyle(css: Path options): this
 	// Sets the given path options to each layer of the group that has a `setStyle` method.
 	setStyle: function (style) {
 		return this.invoke('setStyle', style);
@@ -7865,7 +7865,7 @@ var Path = Layer.extend({
 		return this;
 	},
 
-	// @method setStyle(style: Path options): this
+	// @method setStyle(css: Path options): this
 	// Changes the appearance of a Path based on the options in the `Path options` object.
 	setStyle: function (style) {
 		setOptions(this, style);
@@ -8638,7 +8638,7 @@ function polygon(latlngs, options) {
  *
  * ```js
  * L.geoJSON(data, {
- * 	style: function (feature) {
+ * 	css: function (feature) {
  * 		return {color: feature.properties.color};
  * 	}
  * }).bindPopup(function (layer) {
@@ -8662,7 +8662,7 @@ var GeoJSON = FeatureGroup.extend({
 	 * }
 	 * ```
 	 *
-	 * @option style: Function = *
+	 * @option css: Function = *
 	 * A `Function` defining the `Path options` for styling GeoJSON lines and polygons,
 	 * called internally when data is added.
 	 * The default value is to not override any defaults:
@@ -8747,8 +8747,8 @@ var GeoJSON = FeatureGroup.extend({
 	},
 
 	// @method resetStyle( <Path> layer? ): this
-	// Resets the given vector layer's style to the original GeoJSON style, useful for resetting style after hover events.
-	// If `layer` is omitted, the style of all features in the current layer is reset.
+	// Resets the given vector layer's css to the original GeoJSON css, useful for resetting css after hover events.
+	// If `layer` is omitted, the css of all features in the current layer is reset.
 	resetStyle: function (layer) {
 		if (layer === undefined) {
 			return this.eachLayer(this.resetStyle, this);
@@ -8759,8 +8759,8 @@ var GeoJSON = FeatureGroup.extend({
 		return this;
 	},
 
-	// @method setStyle( <Function> style ): this
-	// Changes styles of GeoJSON vector layers with the given style function.
+	// @method setStyle( <Function> css ): this
+	// Changes styles of GeoJSON vector layers with the given css function.
 	setStyle: function (style) {
 		return this.eachLayer(function (layer) {
 			this._setLayerStyle(layer, style);
@@ -9422,7 +9422,7 @@ function videoOverlay(video, bounds, options) {
  * var svgElement = document.createElementNS("http://www.w3.org/2000/svg", "svg");
  * svgElement.setAttribute('xmlns', "http://www.w3.org/2000/svg");
  * svgElement.setAttribute('viewBox', "0 0 200 200");
- * svgElement.innerHTML = '<rect width="200" height="200"/><rect x="75" y="23" width="50" height="50" style="fill:red"/><rect x="75" y="123" width="50" height="50" style="fill:#0013ff"/>';
+ * svgElement.innerHTML = '<rect width="200" height="200"/><rect x="75" y="23" width="50" height="50" css="fill:red"/><rect x="75" y="123" width="50" height="50" css="fill:#0013ff"/>';
  * var svgElementBounds = [ [ 32, -130 ], [ 13, -100 ] ];
  * L.svgOverlay(svgElement, svgElementBounds).addTo(map);
  * ```
@@ -12384,7 +12384,7 @@ var Canvas = Renderer.extend({
 
 		this._fillStroke(ctx, layer);
 
-		// TODO optimization: 1 fill/stroke for all features with equal style instead of 1 for each feature
+		// TODO optimization: 1 fill/stroke for all features with equal css instead of 1 for each feature
 	},
 
 	_updateCircle: function (layer) {
