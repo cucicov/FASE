@@ -27,7 +27,7 @@ function hideBox(box, callback=null) {
 function showBox(box) {
     box.show();
     box.animate({
-        bottom: 60
+        bottom: 75
     }, 500, function () {
         // Animation complete.
     });
@@ -45,15 +45,60 @@ async function showKunstnerContent() {
     $(".kunst-content").show();
 }
 
+let mobile = false;
+function mobileSettins() {
+    if(window.matchMedia("(max-width: 767px)").matches){
+        mobile = true;
+        // mobile
+        $(".info-box").css("width", "80%");
+        $(".kunst-box").css("width", "80%");
+        $(".info-box").css("left", "50%");
+        $(".info-box").css("transform", "translateX(-50%)");
+        $(".kunst-box").css("left", "50%");
+        $(".kunst-box").css("transform", "translateX(-50%)");
+        $(".menu").css("left", "50%");
+        $(".menu").css("transform", "translateX(-50%)");
+        $(".fase-intro-title").css("font-size", "150px");
+        $(".fase-intro-title").css("margin-bottom", "-40px");
+        $(".info-box").css("padding", "15px");
+        $(".kunst-box").css("padding", "15px");
+    } else{
+        mobile = false;
+        $(".info-box").css("right", "36px");
+        $(".kunst-box").css("right", "36px");
+        $(".kunst-box").css("width", "30%");
+        $(".info-box").css("width", "30%");
+        $(".menu").css("right", "50px");
+        $(".fase-intro-title").css("font-size", "300px");
+        $(".fase-intro-title").css("margin-bottom", "-70px");
+        $(".info-box").css("padding", "30px");
+        $(".kunst-box").css("padding", "30px");
+    }
+}
+
 $(document).ready(()=> {
+
+    mobileSettins();
+
     let map = null;
     initializeCanvas(null).then((localMap) => {
         map = localMap.mymap;
         map.setZoom(5);
     });
 
-    $(".overlay").delay(2000).fadeOut(() => {
-        map.setZoom(6);
+    setTimeout(() => {
+        $(".overlay").fadeOut(() => {
+            map.setZoom(6);
+        });
+    }, 10000);
+
+    $(".overlay").click(() => {
+        $(".overlay").animate({
+            opacity: "0"
+        }, 700, function () {
+            map.setZoom(6);
+            $(".overlay").fadeOut();
+        });
     });
 
     let artistBio = null;
@@ -69,6 +114,7 @@ $(document).ready(()=> {
     let infoEn = $(".info-en");
     let langNo = $(".lang-no");
     let langEn = $(".lang-en");
+    let $kunstnere = $(".kunstnere-header");
 
     infoButton.click(() => {
         showBox(infoBox);
@@ -85,12 +131,20 @@ $(document).ready(()=> {
 
     $(".kunst-close").click(() => {
         hideBox(kunstBox, ()=> {
-            kunstnerInfo.hide();
-            kunstContent.show();
-            kunstnerBackButton.hide();
+            if (!mobile) {
+                kunstnerInfo.hide();
+                kunstContent.show();
+                kunstnerBackButton.hide();
+                $kunstnere.removeClass("col-8");
+                $kunstnere.addClass("col-10");
+                $kunstnere.css("margin-left", "0px");
+                $kunstnere.css("margin-right", "0px");
+            }
         });
         desctivateButton(kunstButton);
-        revealAllImages();
+        if (!mobile) {
+            revealAllImages();
+        }
     });
 
     langNo.click(() => {
@@ -124,8 +178,12 @@ $(document).ready(()=> {
         artistBio = data;
     });
 
-    kunstnerBackButton.click(() => {
+    $(".kunstner-back").click(() => {
         showKunstnerContent();
+        $kunstnere.removeClass("col-8");
+        $kunstnere.addClass("col-10");
+        $kunstnere.css("margin-left", "0px");
+        $kunstnere.css("margin-right", "0px");
         map.remove();
         initializeCanvas(null).then((localMap)=>{
             map = localMap.mymap;
@@ -140,6 +198,11 @@ $(document).ready(()=> {
                                         </div>`);
         $(`.${name}`).click(() => {
             kunstnerBackButton.show();
+            $kunstnere.removeClass("col-10");
+            $kunstnere.addClass("col-8");
+            $kunstnere.css("margin-left", "-30px");
+            $kunstnere.css("margin-right", "30px");
+
             kunstContent.hide();
             kunstnerInfo.show();
             // console.log(artistBio[name]);
