@@ -52,6 +52,13 @@ function mobileSettins() {
         // mobile
         $(".info-box").css("width", "80%");
         $(".kunst-box").css("width", "80%");
+        $(".info-box").css("height", "calc(100vh - 200px)");
+        $(".kunst-box").css("height", "calc(100vh - 200px)");
+
+        $(".info-content").css("height", "calc(100vh - 337px)");
+        $(".kunst-content").css("height", "calc(100vh - 292px)");
+        $(".kunstner-info").css("height", "calc(100vh - 292px)");
+
         $(".info-box").css("left", "50%");
         $(".info-box").css("transform", "translateX(-50%)");
         $(".kunst-box").css("left", "50%");
@@ -64,10 +71,17 @@ function mobileSettins() {
         $(".kunst-box").css("padding", "15px");
     } else{
         mobile = false;
+        $(".info-box").css("height", "calc(100vh - 100px)");
+        $(".kunst-box").css("height", "calc(100vh - 100px)");
         $(".info-box").css("right", "36px");
         $(".kunst-box").css("right", "36px");
         $(".kunst-box").css("width", "30%");
         $(".info-box").css("width", "30%");
+
+        $(".info-content").css("height", "calc(100vh - 237px)");
+        $(".kunst-content").css("height", "calc(100vh - 192px)");
+        $(".kunstner-info").css("height", "calc(100vh - 192px)");
+
         $(".menu").css("right", "50px");
         $(".fase-intro-title").css("font-size", "300px");
         $(".fase-intro-title").css("margin-bottom", "-70px");

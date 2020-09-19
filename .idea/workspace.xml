@@ -3,77 +3,7 @@
   <component name="ChangeListManager">
     <list default="true" id="9809a27c-1fee-4a72-b896-fb1ce261b47b" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/artist-about.json" beforeDir="false" afterPath="$PROJECT_DIR$/artist-about.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/css/style.css" beforeDir="false" afterPath="$PROJECT_DIR$/css/style.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/general-script.js" beforeDir="false" afterPath="$PROJECT_DIR$/general-script.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/AdaMiko/AM_1_1200_800.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/images/AdaMiko/AM_1_1200_800.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/AdaMiko/AM_4_800_1200.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/AdaMiko/AM_4_800_1200.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/AmalieTrones/AT_1_1200_801.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/AmalieTrones/AT_1_1200_801.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/AmalieTrones/AT_2_1200_800.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/AmalieTrones/AT_2_1200_800.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/AmalieTrones/AT_3_1200_802.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/AmalieTrones/AT_3_1200_802.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/AmalieTrones/AT_4_1200_801.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/AmalieTrones/AT_4_1200_801.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/AmalieTrones/AT_5_1200_800.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/AmalieTrones/AT_5_1200_800.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/AnnaMelbye/AE_1_1200_727.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/AnnaMelbye/AE_1_1200_727.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/AnnaMelbye/AE_2_725_1200.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/AnnaMelbye/AE_2_725_1200.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/AnnaMelbye/AE_3_719_1200.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/AnnaMelbye/AE_3_719_1200.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/AnnaMelbye/AE_4_1200_745.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/AnnaMelbye/AE_4_1200_745.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/AnnaMelbye/AE_5_1200_746.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/AnnaMelbye/AE_5_1200_746.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/CamillaLouadah/CL_2_796_1200.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/CamillaLouadah/CL_2_796_1200.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/CamillaLouadah/CL_3_777_1200.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/CamillaLouadah/CL_3_777_1200.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/DanielRognskog/DR_1_1200_960.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/DanielRognskog/DR_1_1200_960.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/DanielRognskog/DR_2_1200_960.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/DanielRognskog/DR_2_1200_960.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/DanielRognskog/DR_3_1200_960.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/DanielRognskog/DR_3_1200_960.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/DanielRognskog/DR_4_1200_960.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/DanielRognskog/DR_4_1200_960.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/DanielRognskog/DR_5_1200_960.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/DanielRognskog/DR_5_1200_960.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/EmilyMcLean/EM_1_811_1200.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/EmilyMcLean/EM_2_1200_811.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/EmilyMcLean/EM_3_1177_1200.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/EmilyMcLean/EM_4_810_1200.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/FredrikBedsvaag/FB_1_1200_800.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/FredrikBedsvaag/FB_1_1200_800.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/FredrikBedsvaag/FB_2_1200_800.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/FredrikBedsvaag/FB_2_1200_800.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/FredrikBedsvaag/FB_3_1200_800.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/FredrikBedsvaag/FB_3_1200_800.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/OscarWarpe/OW_1_1200_800.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/OscarWarpe/OW_2_1200_800.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/OscarWarpe/OW_3_1200_800.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/PalBringe/PB_1_1223_1200.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/PalBringe/PB_1_1223_1200.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/PalBringe/PB_2_1195_1200.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/PalBringe/PB_2_1195_1200.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/PalBringe/PB_3_1187_1200.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/PalBringe/PB_3_1187_1200.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/PalBringe/PB_4_1185_1200.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/PalBringe/PB_4_1185_1200.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/PalBringe/PB_5_1177_1200.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/PalBringe/PB_5_1177_1200.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/SofieSvanes/SS_1_1200_805.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/images/SofieSvanes/SS_1_1200_805.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/SofieSvanes/SS_2_1200_811.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/images/SofieSvanes/SS_2_1200_811.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/SofieSvanes/SS_3_1200_811.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/images/SofieSvanes/SS_3_1200_811.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/SofieSvanes/SS_4_1200_805.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/images/SofieSvanes/SS_4_1200_805.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/StefanLakselvhaug/SL_1_1200_805.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/images/StefanLakselvhaug/SL_1_1200_805.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/StefanLakselvhaug/SL_2_1200_805.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/images/StefanLakselvhaug/SL_2_1200_805.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/StefanLakselvhaug/SL_3_798_1200.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/StefanLakselvhaug/SL_3_798_1200.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/StefanLakselvhaug/SL_4_1200_791.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/StefanLakselvhaug/SL_4_1200_791.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/TanjaSilvestrini/TS_1_757_1200.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/TanjaSilvestrini/TS_1_757_1200.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/TanjaSilvestrini/TS_2_1200_744.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/TanjaSilvestrini/TS_2_1200_744.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/TimHereid/TH_1_1200_803.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/TimHereid/TH_1_1200_803.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/TimHereid/TH_2_803_1200.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/TimHereid/TH_2_803_1200.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/TimHereid/TH_3_1200_810.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/TimHereid/TH_3_1200_810.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/TomGaustad/TG_1_1200_759.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/TomGaustad/TG_1_1200_759.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/TomGaustad/TG_2_1200_878.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/TomGaustad/TG_2_1200_878.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/TuvaRasmussen/TR_1_1200_805.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/images/TuvaRasmussen/TR_1_1200_805.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/TuvaRasmussen/TR_2_805_1200.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/images/TuvaRasmussen/TR_2_805_1200.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/TuvaRasmussen/TR_3_805_1200.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/images/TuvaRasmussen/TR_3_805_1200.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/TuvaRasmussen/TR_4_805_1200.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/images/TuvaRasmussen/TR_4_805_1200.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/TuvaRasmussen/TR_5_1200_805.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/images/TuvaRasmussen/TR_5_1200_805.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/TuvaRasmussen/TR_6_1200_805.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/images/TuvaRasmussen/TR_6_1200_805.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/VeraLunde/VL_10_1200_812.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/VeraLunde/VL_10_1200_812.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/VeraLunde/VL_11_1200_800.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/images/VeraLunde/VL_11_1200_800.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/VeraLunde/VL_1_1200_786.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/VeraLunde/VL_1_1200_786.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/VeraLunde/VL_2_888_1200.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/VeraLunde/VL_2_888_1200.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/VeraLunde/VL_3_817_1200.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/VeraLunde/VL_3_817_1200.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/VeraLunde/VL_4_1200_800.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/images/VeraLunde/VL_4_1200_800.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/VeraLunde/VL_5_1200_800.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/VeraLunde/VL_6_704_705.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/images/VeraLunde/VL_6_704_705.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/VeraLunde/VL_7_175_176.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/images/VeraLunde/VL_7_175_176.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/VeraLunde/VL_8_896_1200.JPG" beforeDir="false" afterPath="$PROJECT_DIR$/images/VeraLunde/VL_8_896_1200.JPG" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/VeraLunde/VL_9_803_1200.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/images/VeraLunde/VL_9_803_1200.jpg" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/images/artist-index.json" beforeDir="false" afterPath="$PROJECT_DIR$/images/artist-index.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
