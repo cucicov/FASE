@@ -275,7 +275,9 @@ $(document).ready(()=> {
             populateInfo(artistBioElement, $kunstnerStedTid, artistBioElement.stedtid);
             populateInfo(artistBioElement, $kunstnerProjectDesc, artistBioElement.text);
             populateInfo(artistBioElement, $kunstnerBio, artistBioElement.bio);
-            showBox(kunstBoxArtistMobile);
+            if (mobile) {
+                showBox(kunstBoxArtistMobile);
+            }
             $(".kunst-box-artist-mobile .kunstnere-header b").html(artistBioElement.name);
 
 
