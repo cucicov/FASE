@@ -81,10 +81,12 @@ body a:hover {
 
 .menu-button {
     background: white;
-    width: 100px;
+    width: 116px;
     border: 1px solid black;
-    padding: 5px 0px;
+    padding: 2px 0px;
 }
+
+
 
 .menu-button:hover{
     background: black;
@@ -102,10 +104,25 @@ body a:hover {
     border: 1px solid black;
 }
 
+.kunst-box-artist-mobile {
+    padding: 5px 5px 5px 15px;
+    position: fixed;
+    bottom: 75px;
+    width: 30%;
+    color: #000;
+    background-color: white;
+    z-index: 8;
+    border: 1px solid black;
+}
+
+.kunst-box-artist-mobile .kunst-box-title {
+    margin-bottom: 0px;
+}
+
 .kunst-box a {
     text-decoration: none;
     font-weight: normal;
-    font-size: 18px;
+    font-size: 16px;
 }
 
 .kunst-box a:hover {
@@ -126,10 +143,6 @@ body a:hover {
 }
 
 .info-en {
-    display: none;
-}
-
-.kunstner-info {
     display: none;
 }
 
@@ -159,6 +172,8 @@ body a:hover {
     overflow-y: auto;
     overflow-x: hidden;
     margin-right: -15px;
+    display: none;
+    padding: 0px 15px;
 }
 
 .kunstern-name {
@@ -190,3 +205,12 @@ body a:hover {
     margin-bottom: 30px;
     font-weight: normal;
 }
+
+.info-no, .info-en {
+    margin-bottom: 60px;
+}
+
+.info-content .container {
+    padding-bottom: 60px;
+}
+

@@ -163,9 +163,12 @@ async function populatePanel(uniqueImagesPanel, restAllImages, selectedArtistNam
     });
 
     if (selectedArtistName === null || selectedArtistName === undefined) {
-        mymap.setView([viewFocusX, viewFocusY], 8);
+        mymap.flyTo([viewFocusX, viewFocusY], 8, {
+            "animate": true,
+            "duration": 0.9
+        });
     } else {
-        mymap.setView(imagesList[1].getBounds().getCenter(), 8)
+        mymap.setView(imagesList[1].getBounds().getCenter(), 8);
     }
 }
 

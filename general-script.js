@@ -43,6 +43,7 @@ async function showKunstnerContent() {
     $(".kunstner-back").hide();
     $(".kunstner-info").hide();
     $(".kunst-content").show();
+    $(".kunstner-back-no-link").show();
 }
 
 let mobile = false;
@@ -69,6 +70,16 @@ function mobileSettins() {
         $(".fase-intro-title").css("margin-bottom", "-40px");
         $(".info-box").css("padding", "15px");
         $(".kunst-box").css("padding", "15px");
+
+        $(".kunst-box-artist-mobile").css("padding", "5px 5px 5px 15px;");
+        $(".kunst-box-artist-mobile").css("transform", "translateX(-50%)");
+        $(".kunst-box-artist-mobile").css("left", "50%");
+        $(".kunst-box-artist-mobile").css("width", "80%");
+        $(".kunst-box-artist-mobile").hide();
+
+        $(".xClose").css("position", "absolute");
+        $(".xClose").css("right", "5px");
+
     } else{
         mobile = false;
         $(".info-box").css("height", "calc(100vh - 100px)");
@@ -87,7 +98,24 @@ function mobileSettins() {
         $(".fase-intro-title").css("margin-bottom", "-70px");
         $(".info-box").css("padding", "30px");
         $(".kunst-box").css("padding", "30px");
+
+        $(".kunst-box-artist-mobile").hide();
+
+        $(".xClose").css("position", "absolute");
+        $(".xClose").css("right", "30px");
+
     }
+}
+
+function kunstBoxCloseCallback(kunstnerInfo, kunstContent, kunstnerBackButton, $kunstnere, kunstnerBackButtonNoLink) {
+    kunstnerInfo.hide();
+    kunstContent.show();
+    kunstnerBackButton.hide();
+    $kunstnere.removeClass("col-8");
+    $kunstnere.addClass("col-10");
+    $kunstnere.css("margin-left", "0px");
+    $kunstnere.css("margin-right", "0px");
+    kunstnerBackButtonNoLink.show();
 }
 
 $(document).ready(()=> {
@@ -120,10 +148,12 @@ $(document).ready(()=> {
     let infoButton = $(".info-button");
     let kunstButton = $(".kunst-button");
     let kunstnerBackButton = $(".kunstner-back");
+    let kunstnerBackButtonNoLink = $(".kunstner-back-no-link");
     let kunstnerInfo = $(".kunstner-info");
     let kunstContent = $(".kunst-content");
     let infoBox = $(".info-box");
     let kunstBox = $(".kunst-box");
+    let kunstBoxArtistMobile = $(".kunst-box-artist-mobile");
     let infoNo = $(".info-no");
     let infoEn = $(".info-en");
     let langNo = $(".lang-no");
@@ -132,7 +162,10 @@ $(document).ready(()=> {
 
     infoButton.click(() => {
         showBox(infoBox);
-        hideBox(kunstBox);
+        hideBox(kunstBox, ()=> {
+            kunstBoxCloseCallback(kunstnerInfo, kunstContent, kunstnerBackButton, $kunstnere, kunstnerBackButtonNoLink);
+            revealAllImages();
+        });
 
         activateButton(infoButton);
         desctivateButton(kunstButton);
@@ -145,20 +178,19 @@ $(document).ready(()=> {
 
     $(".kunst-close").click(() => {
         hideBox(kunstBox, ()=> {
-            if (!mobile) {
-                kunstnerInfo.hide();
-                kunstContent.show();
-                kunstnerBackButton.hide();
-                $kunstnere.removeClass("col-8");
-                $kunstnere.addClass("col-10");
-                $kunstnere.css("margin-left", "0px");
-                $kunstnere.css("margin-right", "0px");
+            kunstBoxCloseCallback(kunstnerInfo, kunstContent, kunstnerBackButton, $kunstnere, kunstnerBackButtonNoLink);
+            if(!mobile) {
+                revealAllImages();
             }
         });
         desctivateButton(kunstButton);
-        if (!mobile) {
+    });
+
+    $(".kunst-close-mobile").click(() => {
+        hideBox(kunstBoxArtistMobile, ()=> {
             revealAllImages();
-        }
+        });
+        desctivateButton(kunstButton);
     });
 
     langNo.click(() => {
@@ -206,12 +238,23 @@ $(document).ready(()=> {
 
 
     shuffle(artistNames);
+
+    function populateInfo(artistBioElement, $kunstnerName, content) {
+        if (content !== null && content !== "") {
+            $kunstnerName.show();
+            $kunstnerName.html(content);
+        } else {
+            $kunstnerName.hide();
+        }
+    }
+
     $.each(artistNames, (index, name) => {
         $(".kunst-content").append(`<div class="row">
                                         <a href="#"><div class="col-sm ${name}">${artistBio[name].name}</div></a>
                                         </div>`);
         $(`.${name}`).click(() => {
             kunstnerBackButton.show();
+            kunstnerBackButtonNoLink.hide();
             $kunstnere.removeClass("col-10");
             $kunstnere.addClass("col-8");
             $kunstnere.css("margin-left", "-30px");
@@ -220,11 +263,21 @@ $(document).ready(()=> {
             kunstContent.hide();
             kunstnerInfo.show();
             // console.log(artistBio[name]);
-            $(".kunstner-info .kunstern-name").html(artistBio[name].name);
-            $(".kunstner-info .project-name").html(artistBio[name].title);
-            $(".kunstner-info .stedtid").html(artistBio[name].stedtid);
-            $(".kunstner-info .project-description").html(artistBio[name].text);
-            $(".kunstner-info .kunstner-bio").html(artistBio[name].bio);
+            let artistBioElement = artistBio[name];
+            let $kunstnerName = $(".kunstner-info .kunstern-name");
+            let $kunstnerProject = $(".kunstner-info .project-name");
+            let $kunstnerStedTid = $(".kunstner-info .stedtid");
+            let $kunstnerProjectDesc = $(".kunstner-info .project-description");
+            let $kunstnerBio = $(".kunstner-info .kunstner-bio");
+
+            populateInfo(artistBioElement, $kunstnerName, artistBioElement.name);
+            populateInfo(artistBioElement, $kunstnerProject, artistBioElement.title);
+            populateInfo(artistBioElement, $kunstnerStedTid, artistBioElement.stedtid);
+            populateInfo(artistBioElement, $kunstnerProjectDesc, artistBioElement.text);
+            populateInfo(artistBioElement, $kunstnerBio, artistBioElement.bio);
+            showBox(kunstBoxArtistMobile);
+            $(".kunst-box-artist-mobile .kunstnere-header b").html(artistBioElement.name);
+
 
             map.remove();
             initializeCanvas(`${name}`).then((localMap)=>{
