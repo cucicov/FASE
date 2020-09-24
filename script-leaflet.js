@@ -1,4 +1,4 @@
-const MAP_PAN_MARGIN = 20;
+const MAP_PAN_MARGIN = 4;
 
 let viewFocusX = 0.0;
 let viewFocusY = 20.0;
@@ -168,18 +168,21 @@ async function populatePanel(uniqueImagesPanel, restAllImages, selectedArtistNam
             "duration": 0.9
         });
     } else {
-        mymap.setView(imagesList[1].getBounds().getCenter(), 8);
+        // manual offset to center the images of each artist.
+        mymap.setView([imagesList[1].getBounds().getCenter().lat - 5, imagesList[1].getBounds().getCenter().lng + 2], 8);
     }
 }
 
 function getImageData(imagePath) {
     let imageName = imagePath.split('/')[2]; // get image name only from format images/adaMiko/1_000_000.jpg
+    let artistId = imageName.split('_')[0];
     let imageWidth = imageName.split('_')[2];
     let imageHeight = imageName.split('_')[3].split('.')[0];
     return {
         "name": imageName,
         "width": imageWidth,
-        "height": imageHeight
+        "height": imageHeight,
+        "artistId": artistId
     }
 }
 
@@ -216,9 +219,9 @@ function calculateMapLimits(imageBounds) {
 async function moveImage(overlay, margin, direction, variableOrigin, variableOriginDifference, variableOriginY, variableOriginX, imageBounds, imageWidth, imageHeight, mymap, newImage, imagesList) {
     let step = 0.3;
     while (overlay || margin > 0) {
-        if (step >= 0.02) { // simulate decreasing step in moving images to offload processing.
-            step -= 0.01;
-        }
+        // if (step >= 0.02) { // simulate decreasing step in moving images to offload processing.
+        //     step -= 0.01;
+        // }
         if (direction > 0) {
             variableOrigin += step;
             variableOriginDifference += step;
@@ -253,10 +256,83 @@ async function moveImage(overlay, margin, direction, variableOrigin, variableOri
 
         overlay = !notIntersection;
         if (!overlay) {
+            step = 0.01;
             margin = margin - 1;
         }
     }
     return {direction, variableOriginY, variableOriginX, imageBounds};
+}
+
+function getArtistBio(artistId) {
+    let fullArtistId = null;
+    if (artistId === "AM") {
+        return artistBio["AdaMiko"];
+    } if (artistId === "AT") {
+        return artistBio["AmalieTrones"];
+    } if (artistId === "AY") {
+        return artistBio["AndreasTystad"];
+    } if (artistId === "AE") {
+        return artistBio["AnnaMelbye"];
+    } if (artistId === "CL") {
+        return artistBio["CamillaLouadah"];
+    } if (artistId === "DR") {
+        return artistBio["DanielRognskog"];
+    } if (artistId === "EM") {
+        return artistBio["EmilyMcLean"];
+    } if (artistId === "FB") {
+        return artistBio["FredrikBedsvaag"];
+    } if (artistId === "OW") {
+        return artistBio["OscarWarpe"];
+    } if (artistId === "PB") {
+        return artistBio["PalBringe"];
+    } if (artistId === "SS") {
+        return artistBio["SofieSvanes"];
+    } if (artistId === "SL") {
+        return artistBio["StefanLakselvhaug"];
+    } if (artistId === "TS") {
+        return artistBio["TanjaSilvestrini"];
+    } if (artistId === "TH") {
+        return artistBio["TimHereid"];
+    } if (artistId === "TG") {
+        return artistBio["TomGaustad"];
+    } if (artistId === "TR") {
+        return artistBio["TuvaRasmussen"];
+    } if (artistId === "VL") {
+        return artistBio["VeraLunde"];
+    }
+}
+
+function addOnClickArtistInfoEvent(imagePath) {
+    hideBox(infoBox);
+    kunstnerBackButton.show();
+    kunstnerBackButtonNoLink.hide();
+    $kunstnere.removeClass("col-10");
+    $kunstnere.addClass("col-8");
+    $kunstnere.css("margin-left", "-30px");
+    $kunstnere.css("margin-right", "30px");
+
+    kunstContent.hide();
+    kunstnerInfo.show();
+    // console.log(artistBio[name]);
+
+    let artistId = getImageData(imagePath).artistId;
+    let artistBioImageLink = getArtistBio(artistId);
+    let artistBioElement = artistBioImageLink;
+    let $kunstnerName = $(".kunstner-info .kunstern-name");
+    let $kunstnerProject = $(".kunstner-info .project-name");
+    let $kunstnerStedTid = $(".kunstner-info .stedtid");
+    let $kunstnerProjectDesc = $(".kunstner-info .project-description");
+    let $kunstnerBio = $(".kunstner-info .kunstner-bio");
+
+    //TODO: remove artistBioElement from method?
+    populateInfo(artistBioElement, $kunstnerName, artistBioImageLink.name);
+    populateInfo(artistBioElement, $kunstnerProject, artistBioImageLink.title);
+    populateInfo(artistBioElement, $kunstnerStedTid, artistBioImageLink.stedtid);
+    populateInfo(artistBioElement, $kunstnerProjectDesc, artistBioImageLink.text);
+    populateInfo(artistBioElement, $kunstnerBio, artistBioImageLink.bio);
+
+    showBox(kunstBox);
+    $(".kunst-box-artist-mobile .kunstnere-header b").html(artistBioElement.name);
 }
 
 function addImage(imagePath, direction, parent, imageWidth, imageHeight, toggleDirection, opacity, mymap, imagesList) {
@@ -270,7 +346,9 @@ function addImage(imagePath, direction, parent, imageWidth, imageHeight, toggleD
     let staticOriginY = 0;
     if (parent === null || parent === undefined) { // this is the first image that has to be placed in the center
         let imageBounds = calculateImageBounds(staticOriginX, staticOriginY, imageWidth, imageHeight, mymap);
-        return L.imageOverlay(imagePath, imageBounds).addTo(mymap);
+        return L.imageOverlay(imagePath, imageBounds, {opacity: opacity, interactive: true}).addTo(mymap).on('click', function(d) {
+            addOnClickArtistInfoEvent(imagePath);
+        });;
     }
 
     let overlay = true;
@@ -293,9 +371,12 @@ function addImage(imagePath, direction, parent, imageWidth, imageHeight, toggleD
     let variableOriginX = staticOriginX;
 
     let imageBounds = calculateImageBounds(variableOriginX, variableOriginY, imageWidth, imageHeight, mymap);
-    let newImage = L.imageOverlay(imagePath, imageBounds, {opacity: opacity}).addTo(mymap);
+    let newImage = L.imageOverlay(imagePath, imageBounds, {opacity: opacity, interactive: true}).addTo(mymap)
+        .on('click', function(d) {
+            addOnClickArtistInfoEvent(imagePath);
+        });
 
-    let margin = getRandomInt(10, 20); // expressed in lat log. 1 unit = 2px; //TODO: configurable
+    let margin = getRandomInt(25, 40); // expressed in lat log. 1 unit = 2px; //TODO: configurable
 
     let variableOriginDifference = 0;
     moveImage(overlay, margin, direction, variableOrigin, variableOriginDifference,
@@ -306,9 +387,7 @@ function addImage(imagePath, direction, parent, imageWidth, imageHeight, toggleD
         variableOriginX = __ret.variableOriginX;
         imageBounds = __ret.imageBounds;
         calculateMapLimits(imageBounds);
-        console.log("finished moving");
     });
-    console.log("finished just adding image");
 
     return newImage;
 }

@@ -51,8 +51,8 @@ function mobileSettins() {
     if(window.matchMedia("(max-width: 767px)").matches){
         mobile = true;
         // mobile
-        $(".info-box").css("width", "80%");
-        $(".kunst-box").css("width", "80%");
+        $(".info-box").css("width", "calc(100vw - 30px)");
+        $(".kunst-box").css("width", "calc(100vw - 30px)");
         $(".info-box").css("height", "calc(100vh - 200px)");
         $(".kunst-box").css("height", "calc(100vh - 200px)");
 
@@ -71,14 +71,16 @@ function mobileSettins() {
         $(".info-box").css("padding", "15px");
         $(".kunst-box").css("padding", "15px");
 
-        $(".kunst-box-artist-mobile").css("padding", "5px 5px 5px 15px;");
+        $(".kunst-box-artist-mobile").css("padding", "0px 5px 5px 15px;");
         $(".kunst-box-artist-mobile").css("transform", "translateX(-50%)");
         $(".kunst-box-artist-mobile").css("left", "50%");
-        $(".kunst-box-artist-mobile").css("width", "80%");
+        $(".kunst-box-artist-mobile").css("width", "calc(100vw - 30px)");
         $(".kunst-box-artist-mobile").hide();
 
         $(".xClose").css("position", "absolute");
         $(".xClose").css("right", "5px");
+
+        $(".menu-button").css("width", "100px");
 
     } else{
         mobile = false;
@@ -104,12 +106,14 @@ function mobileSettins() {
         $(".xClose").css("position", "absolute");
         $(".xClose").css("right", "30px");
 
+        $(".menu-button").css("width", "116px");
+
     }
 }
 
 function kunstBoxCloseCallback(kunstnerInfo, kunstContent, kunstnerBackButton, $kunstnere, kunstnerBackButtonNoLink) {
-    kunstnerInfo.hide();
-    kunstContent.show();
+    // kunstnerInfo.hide();
+    // kunstContent.show();
     kunstnerBackButton.hide();
     $kunstnere.removeClass("col-8");
     $kunstnere.addClass("col-10");
@@ -117,6 +121,36 @@ function kunstBoxCloseCallback(kunstnerInfo, kunstContent, kunstnerBackButton, $
     $kunstnere.css("margin-right", "0px");
     kunstnerBackButtonNoLink.show();
 }
+
+function populateInfo(artistBioElement, $kunstnerName, content) {
+    if (content !== null && content !== "") {
+        $kunstnerName.show();
+        $kunstnerName.html(content);
+    } else {
+        $kunstnerName.hide();
+    }
+}
+
+let infoButton = $(".info-button");
+let kunstButton = $(".kunst-button");
+let kunstnerBackButton = $(".kunstner-back");
+let kunstnerBackButtonNoLink = $(".kunstner-back-no-link");
+let kunstnerInfo = $(".kunstner-info");
+let kunstContent = $(".kunst-content");
+let infoBox = $(".info-box");
+let kunstBox = $(".kunst-box");
+let kunstBoxArtistMobile = $(".kunst-box-artist-mobile");
+let infoNo = $(".info-no");
+let infoEn = $(".info-en");
+let langNo = $(".lang-no");
+let langEn = $(".lang-en");
+let $kunstnere = $(".kunstnere-header");
+
+let artistBio = null;
+
+$.getJSON("artist-about.json", function (data) {
+    artistBio = data;
+});
 
 $(document).ready(()=> {
 
@@ -128,11 +162,11 @@ $(document).ready(()=> {
         map.setZoom(5);
     });
 
-    setTimeout(() => {
-        $(".overlay").fadeOut(() => {
-            map.setZoom(6);
-        });
-    }, 10000);
+    // setTimeout(() => {
+    //     $(".overlay").fadeOut(() => {
+    //         map.setZoom(6);
+    //     });
+    // }, 10000);
 
     $(".overlay").click(() => {
         $(".overlay").animate({
@@ -143,22 +177,16 @@ $(document).ready(()=> {
         });
     });
 
-    let artistBio = null;
-
-    let infoButton = $(".info-button");
-    let kunstButton = $(".kunst-button");
-    let kunstnerBackButton = $(".kunstner-back");
-    let kunstnerBackButtonNoLink = $(".kunstner-back-no-link");
-    let kunstnerInfo = $(".kunstner-info");
-    let kunstContent = $(".kunst-content");
-    let infoBox = $(".info-box");
-    let kunstBox = $(".kunst-box");
-    let kunstBoxArtistMobile = $(".kunst-box-artist-mobile");
-    let infoNo = $(".info-no");
-    let infoEn = $(".info-en");
-    let langNo = $(".lang-no");
-    let langEn = $(".lang-en");
-    let $kunstnere = $(".kunstnere-header");
+    $(".kunst-box-artist-mobile-link").click(() => {
+        kunstnerInfo.show();
+        showBox(kunstBox);
+        kunstnerBackButton.show();
+        kunstnerBackButtonNoLink.hide();
+        $kunstnere.removeClass("col-10");
+        $kunstnere.addClass("col-8");
+        $kunstnere.css("margin-left", "-30px");
+        $kunstnere.css("margin-right", "30px");
+    });
 
     infoButton.click(() => {
         showBox(infoBox);
@@ -177,6 +205,9 @@ $(document).ready(()=> {
     });
 
     $(".kunst-close").click(() => {
+        if (mobile) {
+            showBox(kunstBoxArtistMobile);
+        }
         hideBox(kunstBox, ()=> {
             kunstBoxCloseCallback(kunstnerInfo, kunstContent, kunstnerBackButton, $kunstnere, kunstnerBackButtonNoLink);
             if(!mobile) {
@@ -213,15 +244,21 @@ $(document).ready(()=> {
     });
 
     kunstButton.click(() => {
+        kunstnerInfo.hide();
+        kunstContent.show();
+        
+        $kunstnere.removeClass("col-8");
+        $kunstnere.addClass("col-10");
+        $kunstnere.css("margin-left", "0px");
+        $kunstnere.css("margin-right", "0px");
+        kunstnerBackButton.hide();
+        kunstnerBackButtonNoLink.show();
+
         showBox(kunstBox);
         hideBox(infoBox);
 
         activateButton(kunstButton);
         desctivateButton(infoButton);
-    });
-
-    $.getJSON("artist-about.json", function (data) {
-        artistBio = data;
     });
 
     $(".kunstner-back").click(() => {
@@ -238,15 +275,6 @@ $(document).ready(()=> {
 
 
     shuffle(artistNames);
-
-    function populateInfo(artistBioElement, $kunstnerName, content) {
-        if (content !== null && content !== "") {
-            $kunstnerName.show();
-            $kunstnerName.html(content);
-        } else {
-            $kunstnerName.hide();
-        }
-    }
 
     $.each(artistNames, (index, name) => {
         $(".kunst-content").append(`<div class="row">
@@ -275,9 +303,7 @@ $(document).ready(()=> {
             populateInfo(artistBioElement, $kunstnerStedTid, artistBioElement.stedtid);
             populateInfo(artistBioElement, $kunstnerProjectDesc, artistBioElement.text);
             populateInfo(artistBioElement, $kunstnerBio, artistBioElement.bio);
-            if (mobile) {
-                showBox(kunstBoxArtistMobile);
-            }
+
             $(".kunst-box-artist-mobile .kunstnere-header b").html(artistBioElement.name);
 
 

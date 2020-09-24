@@ -18,8 +18,8 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://unpkg.com/leaflet@1.6.0/dist/leaflet.js" integrity="sha512-gZwIG9x3wUXg2hdXF6+rVkLF/0Vi9U8D2Ntg4Ga5I5BZpVkVxlJWbSQtXPSiUTtC0TjtGOmxa1AJPuV0CPthew==" crossorigin=""></script>
 
-    <script defer src="script-leaflet.js"></script>
     <script defer src="general-script.js"></script>
+    <script defer src="script-leaflet.js"></script>
     <link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
@@ -53,13 +53,16 @@
 <div class="container">
     <div class="row">
 <div class="info-box no-gutter">
-    <div class="row info-box-title">
-        <div class="col-10"><b>FASE</b></div>
+    <div class="row info-box-title align-items-center">
+        <div class="col-7 align-items-center"><b>FASE</b></div>
+        <div class="col-1 info-box-languages">
+            <a href="#"><div class="lang-no">NO</div></a>
+        </div>
+        <div class="col-2 info-box-languages">
+            <a href="#"><div class="lang-en">EN</div></a>
+        </div>
         <a href="#" class="xClose"><div class="col-1 info-close"><img src="resources/close.svg"></div></a>
-    </div>
-    <div class="row info-box-languages">
-        <a href="#"><div class="col-sm lang-no">NORSK</div></a>
-        <a href="#"><div class="col-sm lang-en">ENGLISH</div></a>
+
     </div>
     <div class="row info-content">
         <div class="col-sm info-no">
@@ -84,10 +87,10 @@
             Finally, we can mention how Pål Bringe's double-exposure experiments almost build a limbo world, with trees gliding over the sea textures, and with branches intertwined to create dreamlike textures.
         </div>
         <div class="container mt-auto">
-            <div class="row text-center">
-                <a href="http://bit-teatergarasjen.no" target="_blank"><div class="col-sm"><img src="logos/bitteatergarajen.svg"/></div></a>
-                <a href="https://www.moerkerommet.no/" target="_blank"><div class="col-sm"><img src="logos/Mørkerommet.svg"/></div></a>
-                <a href="http://bit-teatergarasjen.no/proeverommet" target="_blank"><div class="col-sm"><img src="logos/Prøverommet.svg"/></div></a>
+            <div class="row justify-content-center">
+                <a href="http://bit-teatergarasjen.no" target="_blank" style="margin-right: -10px;"><div class="col-3"><img src="logos/bitteatergarajen.svg"/></div></a>
+                <a href="https://www.moerkerommet.no/" target="_blank" style="margin-right: -10px;"><div class="col-3"><img src="logos/Mørkerommet.svg"/></div></a>
+                <a href="http://bit-teatergarasjen.no/proeverommet" target="_blank" style="margin-right: -10px;"><div class="col-3"><img src="logos/Prøverommet.svg"/></div></a>
             </div>
         </div>
     </div>
@@ -125,7 +128,9 @@
 
 <div class="kunst-box-artist-mobile no-gutter">
     <div class="row align-items-center kunst-box-title">
-        <div class="col-10 pt-1 kunstnere-header kunstner-back-no-link"><b>KUNSTNER</b></div>
+        <div class="col-10 pt-1">
+            <a href="#" class="kunst-box-artist-mobile-link"><div class="kunstnere-header kunstner-back-no-link"><b>KUNSTNER</b></div></a>
+        </div>
         <a href="#" class="xClose"><div class="col-1 kunst-close-mobile"><img src="resources/close.svg"></div></a>
     </div>
 </div>
