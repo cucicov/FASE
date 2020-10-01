@@ -141,6 +141,11 @@ body a:hover {
     font-size: 13px;
 }
 
+.lang-no {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
 .info-content {
     height: calc(100vh - 237px);
     overflow-y: auto;
@@ -168,7 +173,7 @@ body a:hover {
 }
 
 .kunst-content .row {
-    margin-bottom: 15px;
+    margin-bottom: 11px;
 }
 
 .kunstner-info {
@@ -178,6 +183,15 @@ body a:hover {
     margin-right: -15px;
     display: none;
     padding: 0px 15px;
+}
+
+.kunstner-info a{
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+.kunstner-info a:hover {
+    text-decoration: none;
 }
 
 .kunstern-name {
@@ -208,6 +222,7 @@ body a:hover {
     font-size: 16px;
     margin-bottom: 30px;
     font-weight: normal;
+    opacity: 60%;
 }
 
 .info-no, .info-en {

@@ -9,6 +9,9 @@ let lonLimit = [0, 0];
 let artistNames = [];
 let imagesList = [];
 
+// let isClickFromImage = false;
+let activeArtist = null;
+
 async function initializeCanvas(selectedArtistName) {
     imagesList = [];
     viewFocusX = 0.0;
@@ -263,49 +266,49 @@ async function moveImage(overlay, margin, direction, variableOrigin, variableOri
     return {direction, variableOriginY, variableOriginX, imageBounds};
 }
 
-function getArtistBio(artistId) {
+function getArtistLongId(artistId) {
     let fullArtistId = null;
     if (artistId === "AM") {
-        return artistBio["AdaMiko"];
+        return "AdaMiko";
     } if (artistId === "AT") {
-        return artistBio["AmalieTrones"];
+        return "AmalieTrones";
     } if (artistId === "AY") {
-        return artistBio["AndreasTystad"];
+        return "AndreasTystad";
     } if (artistId === "AE") {
-        return artistBio["AnnaMelbye"];
+        return "AnnaMelbye";
     } if (artistId === "CL") {
-        return artistBio["CamillaLouadah"];
+        return "CamillaLouadah";
     } if (artistId === "DR") {
-        return artistBio["DanielRognskog"];
+        return "DanielRognskog";
     } if (artistId === "EM") {
-        return artistBio["EmilyMcLean"];
+        return "EmilyMcLean";
     } if (artistId === "FB") {
-        return artistBio["FredrikBedsvaag"];
+        return "FredrikBedsvaag";
     } if (artistId === "OW") {
-        return artistBio["OscarWarpe"];
+        return "OscarWarpe";
     } if (artistId === "PB") {
-        return artistBio["PalBringe"];
+        return "PalBringe";
     } if (artistId === "SS") {
-        return artistBio["SofieSvanes"];
+        return "SofieSvanes";
     } if (artistId === "SL") {
-        return artistBio["StefanLakselvhaug"];
+        return "StefanLakselvhaug";
     } if (artistId === "TS") {
-        return artistBio["TanjaSilvestrini"];
+        return "TanjaSilvestrini";
     } if (artistId === "TH") {
-        return artistBio["TimHereid"];
+        return "TimHereid";
     } if (artistId === "TG") {
-        return artistBio["TomGaustad"];
+        return "TomGaustad";
     } if (artistId === "TR") {
-        return artistBio["TuvaRasmussen"];
+        return "TuvaRasmussen";
     } if (artistId === "VL") {
-        return artistBio["VeraLunde"];
+        return "VeraLunde";
     }
 }
 
 function addOnClickArtistInfoEvent(imagePath) {
     hideBox(infoBox);
     kunstnerBackButton.show();
-    kunstnerBackButtonNoLink.hide();
+    // kunstnerBackButtonNoLink.hide();
     $kunstnere.removeClass("col-10");
     $kunstnere.addClass("col-8");
     $kunstnere.css("margin-left", "-30px");
@@ -316,7 +319,8 @@ function addOnClickArtistInfoEvent(imagePath) {
     // console.log(artistBio[name]);
 
     let artistId = getImageData(imagePath).artistId;
-    let artistBioImageLink = getArtistBio(artistId);
+    let artistLongId = getArtistLongId(artistId);
+    let artistBioImageLink = artistBio[artistLongId];
     let artistBioElement = artistBioImageLink;
     let $kunstnerName = $(".kunstner-info .kunstern-name");
     let $kunstnerProject = $(".kunstner-info .project-name");
@@ -331,8 +335,19 @@ function addOnClickArtistInfoEvent(imagePath) {
     populateInfo(artistBioElement, $kunstnerProjectDesc, artistBioImageLink.text);
     populateInfo(artistBioElement, $kunstnerBio, artistBioImageLink.bio);
 
-    showBox(kunstBox);
+    // showBox(kunstBox);
+    showBox(kunstBoxArtistMobile);
+    $kunstnere.removeClass("col-8");
+    $kunstnere.addClass("col-10");
+    $kunstnere.css("margin-left", "0px");
+    $kunstnere.css("margin-right", "0px");
+    if (isBoxActive(kunstBox)) {
+        kunstnerBackButtonNoLink.hide();
+    } else {
+        kunstnerBackButtonNoLink.show();
+    }
     $(".kunst-box-artist-mobile .kunstnere-header b").html(artistBioElement.name);
+    activeArtist = artistLongId;
 }
 
 function addImage(imagePath, direction, parent, imageWidth, imageHeight, toggleDirection, opacity, mymap, imagesList) {
@@ -348,6 +363,7 @@ function addImage(imagePath, direction, parent, imageWidth, imageHeight, toggleD
         let imageBounds = calculateImageBounds(staticOriginX, staticOriginY, imageWidth, imageHeight, mymap);
         return L.imageOverlay(imagePath, imageBounds, {opacity: opacity, interactive: true}).addTo(mymap).on('click', function(d) {
             addOnClickArtistInfoEvent(imagePath);
+            // isClickFromImage = true;
         });;
     }
 
@@ -374,9 +390,10 @@ function addImage(imagePath, direction, parent, imageWidth, imageHeight, toggleD
     let newImage = L.imageOverlay(imagePath, imageBounds, {opacity: opacity, interactive: true}).addTo(mymap)
         .on('click', function(d) {
             addOnClickArtistInfoEvent(imagePath);
+            // isClickFromImage = true;
         });
 
-    let margin = getRandomInt(25, 40); // expressed in lat log. 1 unit = 2px; //TODO: configurable
+    let margin = getRandomInt(120, 170); // expressed in lat log. 1 unit = 2px; //TODO: configurable
 
     let variableOriginDifference = 0;
     moveImage(overlay, margin, direction, variableOrigin, variableOriginDifference,

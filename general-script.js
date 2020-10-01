@@ -12,6 +12,11 @@ function activateButton(infoButton) {
     infoButton.css("color", "white");
 }
 
+function isBoxActive(box) {
+    console.log(box.css("bottom"));
+    return box.css("bottom") === "75px";
+}
+
 function hideBox(box, callback=null) {
     box.animate({
         bottom: (box.height()*-1)-100
@@ -56,7 +61,7 @@ function mobileSettins() {
         $(".info-box").css("height", "calc(100vh - 200px)");
         $(".kunst-box").css("height", "calc(100vh - 200px)");
 
-        $(".info-content").css("height", "calc(100vh - 337px)");
+        $(".info-content").css("height", "calc(100vh - 292px)");
         $(".kunst-content").css("height", "calc(100vh - 292px)");
         $(".kunstner-info").css("height", "calc(100vh - 292px)");
 
@@ -75,7 +80,6 @@ function mobileSettins() {
         $(".kunst-box-artist-mobile").css("transform", "translateX(-50%)");
         $(".kunst-box-artist-mobile").css("left", "50%");
         $(".kunst-box-artist-mobile").css("width", "calc(100vw - 30px)");
-        $(".kunst-box-artist-mobile").hide();
 
         $(".xClose").css("position", "absolute");
         $(".xClose").css("right", "5px");
@@ -91,7 +95,7 @@ function mobileSettins() {
         $(".kunst-box").css("width", "30%");
         $(".info-box").css("width", "30%");
 
-        $(".info-content").css("height", "calc(100vh - 237px)");
+        $(".info-content").css("height", "calc(100vh - 192px)");
         $(".kunst-content").css("height", "calc(100vh - 192px)");
         $(".kunstner-info").css("height", "calc(100vh - 192px)");
 
@@ -101,13 +105,13 @@ function mobileSettins() {
         $(".info-box").css("padding", "30px");
         $(".kunst-box").css("padding", "30px");
 
-        $(".kunst-box-artist-mobile").hide();
-
         $(".xClose").css("position", "absolute");
         $(".xClose").css("right", "30px");
 
         $(".menu-button").css("width", "116px");
 
+        $(".kunst-box-artist-mobile").css("right", "36px");
+        $(".kunst-box-artist-mobile .xClose").css("right", "1px");
     }
 }
 
@@ -155,6 +159,9 @@ $.getJSON("artist-about.json", function (data) {
 $(document).ready(()=> {
 
     mobileSettins();
+    document.addEventListener('contextmenu', event => event.preventDefault());
+
+    $(".kunst-box-artist-mobile").hide();
 
     let map = null;
     initializeCanvas(null).then((localMap) => {
@@ -186,16 +193,32 @@ $(document).ready(()=> {
         $kunstnere.addClass("col-8");
         $kunstnere.css("margin-left", "-30px");
         $kunstnere.css("margin-right", "30px");
+
+        kunstContent.hide();
+        map.remove();
+        initializeCanvas(activeArtist).then((localMap)=>{
+            map = localMap.mymap;
+        });
     });
 
     infoButton.click(() => {
-        showBox(infoBox);
         hideBox(kunstBox, ()=> {
             kunstBoxCloseCallback(kunstnerInfo, kunstContent, kunstnerBackButton, $kunstnere, kunstnerBackButtonNoLink);
             revealAllImages();
         });
 
-        activateButton(infoButton);
+        if (isBoxActive(infoBox)) {
+            hideBox(infoBox);
+            desctivateButton(infoButton);
+        } else {
+            activateButton(infoButton);
+            showBox(infoBox);
+        }
+
+        hideBox(kunstBoxArtistMobile, ()=> {
+            revealAllImages();
+        });
+
         desctivateButton(kunstButton);
     });
 
@@ -205,14 +228,16 @@ $(document).ready(()=> {
     });
 
     $(".kunst-close").click(() => {
-        if (mobile) {
+        // if (!isClickFromImage) {
+        if($(".kunst-box-artist-mobile .kunstnere-header b").html() !== "") {
             showBox(kunstBoxArtistMobile);
         }
+        // }
         hideBox(kunstBox, ()=> {
             kunstBoxCloseCallback(kunstnerInfo, kunstContent, kunstnerBackButton, $kunstnere, kunstnerBackButtonNoLink);
-            if(!mobile) {
-                revealAllImages();
-            }
+            // if(!mobile) {
+            //     revealAllImages();
+            // }
         });
         desctivateButton(kunstButton);
     });
@@ -222,6 +247,10 @@ $(document).ready(()=> {
             revealAllImages();
         });
         desctivateButton(kunstButton);
+    });
+
+    $(".kunst-box-artist-mobile .kunst-close-mobile").click(() => {
+        $(".kunst-box-artist-mobile .kunstnere-header b").html("");
     });
 
     langNo.click(() => {
@@ -244,9 +273,6 @@ $(document).ready(()=> {
     });
 
     kunstButton.click(() => {
-        kunstnerInfo.hide();
-        kunstContent.show();
-        
         $kunstnere.removeClass("col-8");
         $kunstnere.addClass("col-10");
         $kunstnere.css("margin-left", "0px");
@@ -254,11 +280,22 @@ $(document).ready(()=> {
         kunstnerBackButton.hide();
         kunstnerBackButtonNoLink.show();
 
-        showBox(kunstBox);
-        hideBox(infoBox);
-
-        activateButton(kunstButton);
-        desctivateButton(infoButton);
+        if (isBoxActive(kunstBox)) {
+            hideBox(kunstBox, ()=> {
+                kunstBoxCloseCallback(kunstnerInfo, kunstContent, kunstnerBackButton, $kunstnere, kunstnerBackButtonNoLink);
+                revealAllImages();
+                kunstnerInfo.hide();
+                kunstContent.show();
+            });
+            desctivateButton(kunstButton);
+        } else {
+            kunstnerInfo.hide();
+            kunstContent.show();
+            showBox(kunstBox);
+            hideBox(infoBox);
+            activateButton(kunstButton);
+            desctivateButton(infoButton);
+        }
     });
 
     $(".kunstner-back").click(() => {
@@ -281,6 +318,8 @@ $(document).ready(()=> {
                                         <a href="#"><div class="col-sm ${name}">${artistBio[name].name}</div></a>
                                         </div>`);
         $(`.${name}`).click(() => {
+            activeArtist = name;
+            isClickFromImage = false;
             kunstnerBackButton.show();
             kunstnerBackButtonNoLink.hide();
             $kunstnere.removeClass("col-10");

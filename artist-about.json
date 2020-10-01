@@ -3,8 +3,8 @@
     {
       "name": "Ada Miko",
       "title": "Shape of water",
-      "stedtid": "",
-      "bio": "Ada Miko (f. 1991) er polsk fotograf basert i Bergen. Hun driver med foto- og reiseblogg More Outside www.moreoutside.net",
+      "stedtid": "Uten sted, årstall",
+      "bio": "Ada Miko (f. 1991) er en polsk fotograf basert i Bergen. Hun driver med foto- og reiseblogg <em>More Outside<em><p> <a href='http://moreoutside.net' target='_blank'>www.moreoutside.net</a><br>Instagram: <a href='https://www.instagram.com/moreoutside' target='_blank'>@moreoutside</a></p>",
       "text": "Shape of Water is a collection of photos taken between 2017 - 2020 in 5 different countries: Vietnam, Indonesia, Iceland, Argentina and Chile. It is a study of water as an omnipresent element, which is shaping and giving structure and dimension to the surrounding landscape."
     },
   "AmalieTrones":
@@ -12,120 +12,112 @@
       "name": "Amalie Trones",
       "title": "Sotra Bølgekraftverk",
       "stedtid": "Sotra, 2019",
-      "bio": "Amalie Trones (f. 1996) er styremedlem og fotograf i Mørkerommet fotokollektiv og redaktør for Sjå, Mørkerommets eige foto- og kunstmagasin. Går på legestudiet ved UiB, og skriver hovudoppgåve om kunstterapi i psykiatrien. @amalietrones",
+      "bio": "Amalie Trones (f. 1996) er styremedlem og fotograf i Mørkerommet fotokollektiv og redaktør for Sjå, Mørkerommets eige foto- og kunstmagasin. Går på legestudiet ved UiB, og skriver hovudoppgåve om kunstterapi i psykiatrien.<p>Instagram: <a href='https://www.instagram.com/amalietrones' target='_blank'> @amalietrones </a></p>",
       "text": "“Bølgekraftverket på Sotra” er ei utforsking av eit forlatt bølgekraftverk ute ved havgapet på Vestlandet, der straumproduksjonen er nedlagt, men vinden og bølgekrafta framleis like overveldande. Bølgekraftverket vart bygd i 1985, som eit av dei mest ambisiøse norske kraftprosjekta, men havarerte etter berre tre år grunna dei sterke kreftene. Eit nytt forsøk tok til då, men igjen havarerte det etter kort tid. I dag ligg det der som moderne ruinar i skjergarden, med usikra armeringsjern og betongelement. Ein stad ein kan leite etter noko, finne noko, gå seg vill blant dei tusen grå steinar, i havet."
     },
   "AndreasTystad":
   {
     "name": "Andreas Tystad",
     "title": "Hvor en ikke våger å gå",
-    "stedtid": "",
-    "bio": "Andreas Tystad jobber som festivalskonsulent i BIFF, bartender, kinomedarbeider og frilanser innenfor film og fotografi. Andreas bruker fritiden på å utvikle og utforske historier gjennom film, fotografi og litteratur.",
+    "stedtid": "Uten sted, årstall",
+    "bio": "Andreas Tystad (f. 1997) jobber som festivalskonsulent i BIFF, bartender, kinomedarbeider og frilanser innenfor film og fotografi. Andreas bruker fritiden på å utvikle og utforske historier gjennom film, fotografi og litteratur.",
     "text": "Når kommer du?"
   },
   "CamillaLouadah":
   {
     "name": "Camilla Louadah Hermansen",
-    "title": "",
-    "stedtid": "Australia 2017-2018",
-    "bio": "Camilla Louadah Hermansen (f.1994) er redaksjonsmedlem i Sjå kunst- og fotomagasin og tidligere foto-ansvarlig for Mørkerommet. For tiden bosatt i Oslo og studerer miljø og utvikling. Hun driver aktivt på med analog fotografering og er spesielt interessert i å utforske samspillet mellom menneske og natur.",
+    "title": "Uten tittel",
+    "stedtid": "Australia, 2017-2018",
+    "bio": "Camilla Louadah Hermansen (f. 1994) er redaksjonsmedlem i Sjå kunst- og fotomagasin, student og for tiden bosatt i Oslo. Hun er ofte interessert i å observere og utforske relasjonen og samspillet mellom menneske og natur. <p>Instagram: <a href='https://www.instagram.com/camillalulu' target='_blank'>@camillalulu</a></p>",
     "text": ""
   },
   "DanielRognskog":
   {
     "name": "Daniel Rognskog",
-    "title": "",
-    "stedtid": "",
-    "bio": "Daniel Rognskog Edenholm (f. 1995) tar en bachelor i kunst ved Universitetet i Bergen. Han er ofte opptatt av hvordan ideer, uttrykk og bilder reiser gjennom forskjellige teknologier, forvrenges, plukkes fra hverandre, for så å bli montert sammen igjen i nye arrangementer.\nwww.danielrognskog.myportfolio.com\ninstagram: @d.edenholm",
-    "text": "Noen har spist seg inn i berget -- under huset der du bor \nNoen spiser på kartet ditt -- i berget under huset der du bor\nNoen har drukket pepsi og skutt på blink."
+    "title": "Uten tittel",
+    "stedtid": "Uten sted, årstall",
+    "bio": "Daniel Rognskog Edenholm (f. 1995) tar en bachelor i kunst ved Universitetet i Bergen. Han er ofte opptatt av hvordan ideer, uttrykk og bilder reiser gjennom forskjellige teknologier, forvrenges, plukkes fra hverandre, for så å bli montert sammen igjen i nye arrangementer. <p><a href='http://danielrognskog.myportfolio.com' targe='_blank'>danielrognskog.myportfolio.com</a><br> Instagram: <a href='https://www.instagram.com/d.edenholm' target='_blank'>@d.edenholm</a></p>",
+    "text": "Noen har spist seg inn i berget -- under huset der du bor <br> Noen spiser på kartet ditt -- i berget under huset der du bor <br> Noen har drukket pepsi og skutt på blink."
   },
   "EmilyMcLean":
   {
     "name": "Emily McLean",
-    "title": "",
-    "stedtid": "",
-    "bio": "Emily McLean, studerer medisin ved UiB. Veldig glad i analog fotografering. Fersk fotograf hos mørkerommet.",
-    "text": "«tilværelsens uutholdelige letthet» - Bok av Milan Kundera"
+    "title": "Tilværelsens uutholdelige letthet",
+    "stedtid": "Uten sted, årstall",
+    "bio": "Emily McLean (f. 1992) studerer medisin ved UiB. Veldig glad i analog fotografering. Fersk fotograf hos mørkerommet.",
+    "text": ""
   },
   "FredrikBedsvaag":
   {
     "name": "Fredrik Bedsvaag",
     "title": "Berlin",
     "stedtid": "Berlin, 2017",
-    "bio": "Fredrik Geving Bedsvaag (f. 1995) er lektorstudent og selvlært fotograf bosatt i Bergen. Fortsetter å beundre gode fotografiers evne til å gi liv til tapte minner. Tar for det meste bilder digitalt med et Nikon D3s, men av og til trekker han opp film i mormors gamle Ricoh eller et Pentax KM.\nNettside: http://fredrikbedsvaag.com/ / instagram: www.instagram.com/fbedsvaag",
-    "text": "1. Tusen tyskere synger sammen mot motstanderne i motvind. Det var i dette øyeblikk jeg forsto verdien av røykeloven hjemme i Norge.\n2. Sytti-syvende spilleminutt og solen er i ferd med å senke seg over Olympiastadion. Mon tro det er mindre pølsekø nå?\n3. Annenhvert år pulles det opp med flammer. Kronprins Haakon på Lillehammer."
+    "bio": "Fredrik Geving Bedsvaag (f. 1995) er lektorstudent i engelsk og sosiologi ved Universitet i Bergen. Selvlært fotograf bosatt i Bergen. Fortsetter å beundre gode fotografiets evne til å gi liv til tapte minner. Tar for det meste bilder digitalt, men av og til trekker han opp film i mormors gamle Ricoh eller et Pentax KM.<p><a href='http://fredrikbedsvaag.com' target='_blank'> fredrikbedsvaag.com </a> <br> Instagram: <a href='https://www.instagram.com/fbedsvaag' target='_blank'>@fbedsvaag</a></p>",
+    "text": "Å besøke et nytt sted for første gang setter kroppen i en slags spenning. Kroppens sanseapparat forsterkes og man suger til seg alt av inntrykk i form av lukt, lyd, og lys på en annen måte sammenlignet med vante omgivelsers numne tilstedeværelse. Tusenvis av tyskere som synger unisont på et språk du ikke forstår. Det varme solskinnet som ligger lavt over en iskald Olympiastadion en sen ettermiddag i mars. Lukten av øl, sigaretter og t-bane på vei hjem. Coronavirus forsvinn, jeg vil ut igjen."
   },
   "OscarWarpe":
   {
     "name": "Oscar Warpe",
-    "title": "",
-    "stedtid": "",
-    "bio": "Oscar Warpe er ein 24 år gamal informatikkstudent. Tek bilete i svart-kvitt. \nKva hadde bilete vore utan ord? Medlem av Mørkerommet sidan 2020.",
-    "text": "1. Dermed pasta\nFør me får hausta av det me sår. \n \n2. Instant Crush \n - ingen tekst -\n \n3. Ned i puta\nDet får du aldri vita. \n"
+    "title": "Jeg har skuffet noen jeg er glad i",
+    "stedtid": "Bergen, 2020",
+    "bio": "Oscar Warpe (f. 1996) er student og tek bilete i svart-kvitt. Kva hadde bilete vore utan ord? Medlem av Mørkerommet sidan 2020.",
+    "text": "Jeg har lenge tenkt.  <p>Det har du også. <br> Kult at hun har funnet noe nytt å holde på med. <br> Jeg unner henne det. </p> <p>Det var uansett for sent å returnere den. </p> <p>Er det noe du vil at jeg skal hjelpe til med? <br> Neida, det går bra! </p> <p>Bitch. </p> <p>Noen ganger føler jeg. <br> Det gjør du også. <br>Kan du tenke på noe annet? <br> Bare en liten stund. </p> <p>Jeg får ikke gjort noenting. <br>Det er så lett. <br>Føler du det samme? <br>Prøv å vente. <br>Det er vanskelig. </p><p>Vi burde kanskje vente litt. <br>Før vi høster det vi sår. <br>Tenker du det samme? </p><p>En lenke eller to. <br>Hva gjør vel noen flere? </p><p>De tar med hyller. <br>Jeg trenger ikke hyller. </p><p>Har plutselig mindre tid. <br>Trenger mer tid. <br>Eller saktere tid. </p><p>En ny dag kommer snart. <br>For snart. </p><p>Alt hastverket. </p><p>Noen ganger husker jeg.<br>Et minne eller to. </p><p>Snart bare ett. <br>Kanskje ingen. </p><p>Prioriteringer. </p><p>Husker du også...? <br>Kanskje jeg husker feil. </p><p>Det er nå det begynner. <br>Det har allerede begynt. <br>Det er jeg helt sikker på. </p><p>Hva tror du skjer etterpå? </p><p>Jeg har virkelig ikke peiling. <br>Dermed pasta. </p><p>Pasta la vista. </p>"
   },
   "PalBringe":
   {
     "name": "Pål Bringe",
     "title": "New Dawn Fades",
-    "stedtid": "Hagen 2020",
+    "stedtid": "Hagen, 2020",
     "bio": "Pål Bringe (f. 2001) er endelig ferdig på videregående skole og skal på folkehøgskole i Lofoten etter sommeren for å arbeide videre med analog fotografering. Han drar mye inspirasjon fra musikkverdenen, spesielt 80-talls orkestre som The Smiths, The Cure og Joy Division. Det mest interessante er mørke og forvridde motiver i svart hvitt.",
-    "text": "Bildeserien skulle opprinnelig hete “Norwegian Wood”. Men under kurateringen viste det seg mer passende med en Joy Division tittel. Takket være visse hendelser passet sangen New Dawn Fades spesielt bra for å beskrive serien. Både bildeserien og sangen reflekterer mye av de “kunstneren” tenker om det meste. \n\nDifferent colors, different shades\nOver each mistakes were made\nI took the blame\n"
+    "text": "Bildeserien skulle opprinnelig hete “Norwegian Wood”. Men under kurateringen viste det seg mer passende med en Joy Division tittel. Takket være visse hendelser passet sangen New Dawn Fades spesielt bra for å beskrive serien. Både bildeserien og sangen reflekterer mye av det “kunstneren” tenker om det meste.<p><em>Different colors, different shades.<br>Over each mistakes were made.<br>I took the blame<em></p>"
   },
   "SofieSvanes":
   {
     "name": "Sofie Svanes",
     "title": "Veður",
-    "stedtid": "Utesperret 1 og 2: Siglufjörður, Island, 2019\n Kl 14:05 og 14:09: Jökulsárlón, Island, 2019\n",
-    "bio": "Sofie Svanes (f.1996) er fotograf og grafisk designer for Mørkerommet. Bildene hennes skildrer ofte natur, arkitektur og mennesker. Hun er interessert i å fange personlige øyeblikk og er fascinert av det mystiske.\n@sofsvades @sofie5s sofiesvanes.com\n",
-    "text": "Ófærð\nInnesperret\nVæret stenger fjellet\nBilene står stille\nSnøen stenger dørene\nUtesperret\nPå andre siden av landet smelter isen\nMørkt og lyst\nVæret skifter på minutter\nIsen beveger seg\nUfrivillig"
+    "stedtid": "Uten sted, årstall",
+    "bio": "Sofie Svanes (f. 1996) er fotograf og grafisk designer for Mørkerommet. Bildene hennes skildrer ofte natur, arkitektur og mennesker. Hun er interessert i å fange personlige øyeblikk og er fascinert av det mystiske. <p> <a href='https://www.instagram.com/sofsvades' target='_blank'>@sofsvades</a><br><a href='https://www.instagram.com/sofie5s' target='_blank'>@sofie5s</a><br><a href='https://sofiesvanes.com/' target='_blank'>www.sofiesvanes.com</a></p>",
+    "text": "Ófærð Innesperret Været stenger fjellet Bilene står stille Snøen stenger dørene Utesperret På andre siden av landet smelter isen Mørkt og lyst Været skifter på minutter Isen beveger seg Ufrivillig"
   },
   "StefanLakselvhaug":
   {
     "name": "Stefan Lakselvhaug",
-    "title": "",
-    "stedtid": "",
-    "bio": "Stefan Lakselvhaug (f. 1998) er fotograf hos Dropout.Kid kreativt studio. Jobber som selvstendig næringsdrivende i Oslo. Instagram: www.instagram.com/eyyystefan",
-    "text": "FASE:Når jeg nå bryter mitt 4 år lange mønster, klarer jeg ikke la være å se tilbake og lure på hvilke bekjentskap, erfaringer og sjanser som har passert meg. Hvem kunne jeg vært nå, hadde jeg bare vært mer alene."
+    "title": "Snevre seg inn",
+    "stedtid": "Larvik/Oslo, 2019-2020",
+    "bio": "Stefan Lakselvhaug (f. 1998) er frilansfotograf, mens jeg studerer og jobber i musikkbransjen. <p>Instagram: <a href='https://www.instagram.com/eyyystefan' target='_blank'>@eyyystefan</a></p>",
+    "text": "Tilbakeblikk på et par år med litt for mange hobbyer, men mye blomstring. Nå må jeg ta et vanskelig valg og legge bak meg en type helhet ved dagene mine, mot at jeg dykker dypere i det jeg vil drive med."
   },
   "TanjaSilvestrini":
   {
     "name": "Tanja Silvestrini",
-    "title": "",
+    "title": "Uten tittel",
     "stedtid": "",
-    "bio": "Livet er absurd. Tanja Silvestrini (1995) beveger seg gjennom verden i saktefilm, med oppsperrede øyne og åpne armer. Som en mygg suger blodet fra sitt bytte, ekstraherer hun informasjon fra hverdagen som hun bruker i sine verk. Hun uteksaminertes fra Kunstakademiet i Bergen våren 2020, og har en spesiell katt til midlertidig adopsjon.\nInsta: www.instagram.com/tusenspor_waaktaar\nHjemmeside: www.tanjasilvestrini.wix.com/tams",
-    "text": "Kaisla (2019)\nSkjebnen førte meg til Kaisla da jeg flytta til Finland for første gang i 2017. Jeg jobba som kunstnerassistent på den vest-finske landsbygda og var innom Helsinki hver torsdag for å spille trommer. Når jeg var i byen bodde jeg vanligvis hos en annen trommis, men én kveld hadde han planer. Jeg bestemte meg for å gå på et couchsurfing-treff på en bar i sentrum. Satte meg ved et tilfeldig bord og hilste på de som satt der. To og et halvt år senere surfer jeg på Kaislas sofa for gud-vet-hvilken-gang.\n \nMorgen i Stockholm (2020)\nNettopp ankommet Stockholm med Vilde og Niko etter ei uke i Helsinki. Klokka er sju om morgenen, og vi har åtte timer før toget til Oslo går. Vilde setter seg på en kafé. Niko og jeg krysser Danviksbron for å finne en døgnåpen sexbutikk."
+    "bio": "Tanja Silvestrini (f. 1995) beveger seg gjennom verden i saktefilm, med oppsperrede øyne og åpne armer og tenker at livet er absurd. Som en mygg suger blodet fra sitt bytte, ekstraherer hun informasjon fra hverdagen som hun bruker i sine verk. Hun ble bachelor i kunst ved Kunstakademiet i Bergen våren 2020, og har en spesiell katt til midlertidig adopsjon.<p><a href='http://tanjasilvestrini.wix.com/tams' target='_blank'>tanjasilvestrini.wix.com/tams</a><br>Instagram: <a href='http://instagram.com/tusenspor_waaktaar' target='_blank'>@tusenspor_waaktaar</a></p>",
+    "text": "Helsinki, 2019<p>Skjebnen førte meg til Kaisla da jeg flytta til Finland for første gang i 2017. Jeg jobba som assistent for en kunstner på den vest-finske landsbygda og var innom Helsinki hver torsdag for å spille trommer. Når jeg var i byen bodde jeg vanligvis hos en annen trommis, men én kveld hadde han andre planer. Jeg bestemte meg for å dra på et couchsurfing-treff på en bar i sentrum. Satte meg ved et tilfeldig bord og hilste på de som satt der - utrolig søte mennesker. Vi preika i et par timer, tok et par øl. Dro fra baren med et smil. To og et halvt år senere surfer jeg på Kaislas sofa for gud-vet-hvilken-gang.</p><p>Stockholm, 2020 </p><p>Finlandsbåten har nettopp lagt til kai i Stockholm etter ei uke i Helsinki. Klokka er sju om morgenen, og vi har åtte timer før vi skal videre med toget til Oslo. Vilde går for å finne en kafé, mens Niko og jeg krysser Danviksbron for å finne en døgnåpen sexbutikk.</p>"
   },
   "TimHereid":
   {
     "name": "Tim Hereid",
-    "title": "FORSØMMELSE",
-    "stedtid": "Kristiansholm/Minde/Åsane 2020",
+    "title": "Forsømmelse",
+    "stedtid": "Kristiansholm/Minde/Åsane, 2020",
     "bio": "Jeg er en kreativ sjel med føtter, evt. en storetå, innenfor musikk, foto og video. Driver en sketsj-basert youtube kanal, går alltid med kameraet hengende over skulderen og jobber for tiden med mitt første album. Er også notorisk dårlig på å tygge maten min før jeg svelger.\n@Sir.Timotheus",
-    "text": "Foto, Kristianholm: «vi bygget en verden, men havet stiger»\nFoto, Minde: «ut av ruiner skal vi skape»\nFoto, Åsane: «lyset penetrerer min mørke hule»"
+    "text": "Neglisjert og forlatt av menneskene. Universet har kommet for å gjøre krav på dem som ble etterlatt. Alt som skjuler seg i skyggene vil en dag slukes av lyset."
   },
   "TomGaustad":
   {
     "name": "Tom Gaustad",
-    "title": "",
-    "stedtid": "",
-    "bio": "(Tom) er litteraturstudent og til tider ivrig analog fotograf. Han forsøker å være bevisst på det noetiske og det ubeskrivelige i menneskets natur. Av og til lykkes han.",
-    "text": "Begge disse bildene er tatt i sommerens klamhet."
+    "title": "Det monumentale",
+    "stedtid": "Blodbyen og Firenze, 2019",
+    "bio": "Tim Hereid (f. 1996) er en kreativ sjel med føtter, evt. en storetå, innenfor musikk, foto og video. Driver en sketsj-basert youtube kanal, går alltid med kameraet hengende over skulderen og jobber for tiden med sitt første album. Han er også notorisk dårlig på å tygge maten sin før han svelger.<p> Instagram: <a href='https://www.instagram.com/sir.timotheus' target='_blank'>@Sir.Timotheus</a></p>",
+    "text": "Du så for deg en monumental skikkelse, en som ville kommet uten å melde fra først; han ville tatt deg på fersken. Du ville brettet hånden langsomt oppover brystet ditt og dannet en skygge med den så du kunne se; du ville kjent det magre øyenbrynet ditt streife over pekefingeren og sakte ville synet ditt tilvendt seg det tunge lyset fremstilt av en lav og slurvende sol. Hva ville han ha, hva ville han erobre? Dette ville bli klart med tiden, når han alt hadde forsvunnet inn i det basale."
   },
   "TuvaRasmussen":
   {
     "name": "Tuva Rasmussen Tørresdal",
     "title": "Ikkje min feil",
-    "stedtid": "Larvik 2018",
-    "bio": "Tuva Rasmussen Tørresdal (f. 2000) pr-ansvarlig for Mørkerommet fotokollektiv, kunststudent og bosatt i Bergen. \nDriver med kunstfilm, performance, analog foto og keramikk.\nNettside: https://tuvatoerresdal.com \nInstagram: https://www.instagram.com/t_v_i_l/ & https://www.instagram.com/tuvatoerresdal/ ",
-    "text": "“ikkje min feil” \nDet er ikkje min feil, sa du. Men var det min? Du meinte kanskje det, at alt berre var min feil. Sjølv trur eg ikkje det. Nei, eg trur ikkje eg var noko verre eller betre enn deg. Du hadde feil. Ganske mykje feil eigentleg. Men du, du vil ikkje innsjå at du hadde det. Innsjå at du hadde like mykje feil som meg i dette. Og du, du vil nok alltid legga feilen over på meg og eg vil gjera det same tilbake. Sjølv om eg veit, eg veit inst inne at me var like gode. Like gode var me. Oss to saman. Oss to.\n\n\nBildeserien \"ikkje min feil\" inngår i magasinet \"tvilpost\" som ser på ung usikkerhet, åpenhet og nakenhet. Magasinet er laget av fotografen av bildeserien."
-  },
-  "VeraLunde":
-  {
-    "name": "Vera Lunde",
-    "title": "",
-    "stedtid": "2001\n2012\n2020\n2018\n2095\n2017\n2007\n2013\n2018\n2018\n2018\n",
-    "bio": "Vera Lunde (f.1995) er leiar og fotograf for Mørkerommet fotokollektiv, initiativtakar til Sjå, Mørkerommets eige foto- og kunstmagasin. Ho arbeider som resepsjonist hjå Hordaland Kunstsenter og er busett i Bergen.\n",
-    "text": ""
+    "stedtid": "Larvik, 2018",
+    "bio": "Tuva Rasmussen Tørresdal (f. 2000) er pr-ansvarlig for Mørkerommet fotokollektiv, kunststudent og bosatt i Bergen. Driver med kunstfilm, performance, analog foto og keramikk. <p> Nettside: <a href='https://tuvatoerresdal.com' target='_blank'>tuvatoerresdal.com</a><br> Instagram: <a href='https://www.instagram.com/t_v_i_l/' target='_blank'>@t_v_i_l</a> & <a href='https://www.instagram.com/tuvatoerresdal/' target='_blank'>@tuvatoerresdal</a></p>",
+    "text": "“ikkje min feil” Det er ikkje min feil, sa du. Men var det min? Du meinte kanskje det, at alt berre var min feil. Sjølv trur eg ikkje det. Nei, eg trur ikkje eg var noko verre eller betre enn deg. Du hadde feil. Ganske mykje feil eigentleg. Men du, du vil ikkje innsjå at du hadde det. Innsjå at du hadde like mykje feil som meg i dette. Og du, du vil nok alltid legga feilen over på meg og eg vil gjera det same tilbake. Sjølv om eg veit, eg veit inst inne at me var like gode. Like gode var me. Oss to saman. Oss to. Bildeserien “ikkje min feil” inngår i magasinet “tvilpost” som ser på ung usikkerhet, åpenhet og nakenhet. Magasinet er laget av fotografen av bildeserien."
   },
   "AnnaMelbye":
   {
